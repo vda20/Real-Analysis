@@ -145,7 +145,7 @@
 </p>
   </subsection>
 
-<subsection> <title>Logic and proofs</title>
+<subsection> <title>Logic and set theory</title>
 <p>Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve
 problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations.
 Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often
@@ -184,20 +184,20 @@ But how do we make other sets? Here logic, and other primitive notions, come int
 any sentence that must be either true or false. So "5 is a natural number" is a true statement, "New York is the
 capital of the United States" is a false statement. But "Who are you?" is not a statement because it makes
 no sense to ask if it is true or false, and  "onions taste good" is not a statement because whether it is true 
-or false depends on who we ask. We will often use symbols with special font, such as <m>\mathscr P</m> or
-<m>\mathscr Q</m>, followed by a colon, to denote statements. So we could write <m>\mathscr P</m>: "5 is a natural number" or
-<m>\mathscr Q</m>: "New York is the capital of the United States". If we write <m>{\mathscr P}(x)</m>, it means
-that the statement <m>\mathscr P</m> depends on whatever <m>x</m> may be. So for example 
-<m>{\mathscr P}(x)</m>: "<m>x</m> is a natural number less than 5" is a statement that is true if <m>x</m> is
+or false depends on who we ask. We will often use symbols with special font, such as <m>\cal P</m> or
+<m>\cal Q</m>, followed by a colon, to denote statements. So we could write <m>\cal P</m>: "5 is a natural number" or
+<m>\cal Q</m>: "New York is the capital of the United States". If we write <m>{\cal P}(x)</m>, it means
+that the statement <m>\cal P</m> depends on whatever <m>x</m> may be. So for example 
+<m>{\cal P}(x)</m>: "<m>x</m> is a natural number less than 5" is a statement that is true if <m>x</m> is
 1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <em>variable</em>. Of course a 
-variable need not represent a number. We could consider the statement <m>{\mathscr P}(x)</m>: "<m>x</m> is a student
+variable need not represent a number. We could consider the statement <m>{\cal P}(x)</m>: "<m>x</m> is a student
 in this class", and then <m>x</m> represents a person. 
     </p>
 <p>A common and useful way to describe sets is the <em>set builder notation</em>. Suppose
-<m>{\mathscr P}(x)</m> is a statement depending on some variable <m>x</m>. We can then consider the set 
-of all possible <m>x</m> that will make <m>{\mathscr P}(x)</m> true, and we denote it by 
-<m>\{x| {\mathscr P}(x)\}</m>. So if <m>{\mathscr P}(x)</m>: "<m>x</m> is a natural number less than 5", then
-<m>\{x| {\mathscr P}(x)\}=\{1,2,3,4\}</m>.
+<m>{\cal P}(x)</m> is a statement depending on some variable <m>x</m>. We can then consider the set 
+of all possible <m>x</m> that will make <m>{\cal P}(x)</m> true, and we denote it by 
+<m>\{x| {\cal P}(x)\}</m>. So if <m>{\cal P}(x)</m>: "<m>x</m> is a natural number less than 5", then
+<m>\{x| {\cal P}(x)\}=\{1,2,3,4\}</m>.
   </p>
 
 <p>
@@ -253,7 +253,48 @@ useful exercise, we should be able to express in words concepts presented using 
 we shoud be able to write in compact symbolic form statements that were made using only words.
 </p>
 
+<p> Before we proceed with more definitions, we need to review some logic. If <m>\cal P</m> is a statement, we
+denote by <m>\sim \cal P</m> its negation. So <m>\sim \cal P</m> is true when <m>\cal P</m> is false, and
+<m>\sim \cal P</m> is false when <m>\cal P</m> is true. For example, if <m>{\cal P} (x)</m>: "<m>x</m> is an integer 
+greater than 1" then <m>\sim {\cal P} (x)</m>: "<m>x</m> is an integer less than or equal to 1".  
+</p>
+
+<p>
+  If <m>\cal P</m> and <m>\cal Q</m> are statements, we can construct another statement, 
+  called an <em>implication</em> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
+  <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. The logic is that we
+  are thinking that <m>\cal P</m> implies <m>\cal Q</m>, or that <m>\cal Q</m> follows from <m>\cal P</m>.
+  To understand why we say that the statement <m>{\cal P} \Rightarrow {\cal Q}</m> is always true except in the
+  case that <m>\cal P</m> is true and <m>\cal Q</m> is false, think of it as a promise. So suppose 
+  <m>\cal P</m> is the statement "the New Orleans Saints win the game" and <m>\cal Q</m> is the
+  statement "I will take you out to dinner". Then 
+  <m>{\cal P} \Rightarrow {\cal Q}</m> is the promise that if the Saints win the game, 
+  I will take you out to dinner. How can this promise be broken? Only if the Saints win, and yet I do not take
+  you out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement 
+  <m>{\cal P} \Rightarrow {\cal Q}</m> remains true for sure, whether or not I take you out for dinner, 
+  because there is no broken promise.
+  This logical property of implications is sometimes referred to by saying that "a false statement implies anything". 
+
+</p>
+<p>
+We will now give a few more especially important definitions. A complete treatment of set theory can be found
+in many freely avaialble online sources such as <url href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">
+this textbook on Discrete Mathematics</url>.
+<definition xml:id="def-subset">
+  <statement>
+    <p>
+      If <m>A</m> and <m>B</m> are sets, we say that <m>A</m> is a <em>subset</em> of <m>B</m> if every element
+      of <m>A</m> is also an element of <m>B</m>, and in this case we write <m>A\subset B</m>. 
+    </p>
+  </statement>
+</definition>
+Note again how this definition provides three pieces of information: the explanation of a new concept, 
+its name in English (subset) and the symbol used <m>\subset</m>. We can make the same definition using only symbols:
+
+  </p>
   </subsection>
+
+
   </section>
     </chapter>
 
