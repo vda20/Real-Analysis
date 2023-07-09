@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\R}{\mathbb R}
+    </macros>
+    <latex-image-preamble>
+      \usepackage{tikz}
+    </latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="my-great-book">
+    <title>Real Analysis</title>
+    <subtitle>Math 4050-4060</subtitle>
+    
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Valerio De Angelis</personname>
+          <department>Mathematics Department</department>
+          <institution>Xavier University of Louisiana</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <website>
+          <name>
+            <c></c>
+          </name>
+          <address></address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>Valerio De Angelis</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+    </frontmatter>
+
+    <chapter xml:id="chapter-title">
+      <title>Introduction</title>
+
+      <section xml:id="section-title">
+        <title>How is this course different from Calculus?</title>
+        <p>A large portion of this course will consist in studying real numbers, functions of a real variable, 
+        continuity, limits, derivatives and integrals. So what is the difference with the Calculus course?
+        Maybe an example will be useful to explain the difference. Suppose Jasmine has just taken the Calculus course,
+        and  she is helping Kevin with this problem: If <m>f(x)=x^{10}</m>, find <m>f'(x)</m>. Jasmine solves
+         the problem and gets the right answer: using the power rule,
+          she finds that <m>f'(x)=10x^9</m>. This is what she learned in the 
+        Calculus course.</p>
+        <p>
+        But suppose now Kevin asks: "But what does <m>f'(x)</m> stand for?". 
+        Jasmine will probably answer: "It's the derivative of <m>f(x)</m>". This is correct, but it really doesn't 
+        explain what it is, it just says what its name is. If Kevin is curious he will want to know what 
+        the derivative is
+        all about and why we are so interested in it. Depending on how well Jasmine learned the Calculus material,
+        she may be able to explain that the derivative is the limit as <m>h</m> goes to zero of the 
+        difference quotient <m>(f(x+h)-f(x))/h</m>, and it represents the slope of the tangent line to the 
+        graph of <m>f</m>. But if Kevin were to press her with the next natural question:
+         "but what is a limit? And what is a tangent line?", she would not be able to give a precise answer. 
+         And almost surely, 
+         she will not be able to explain why the derivative of <m>x^n</m> is <m>nx^{n-1}</m>. Because in the 
+         Calculus course much of the focus is on how to <alert>use</alert> some rules, without worrying where they 
+         come from. 
+          </p>
+          <p>In Real Analysis, we will give a very precise meaning to all notions we meet. So it is not enough to say
+          that <m>\displaystyle \lim_{x\rightarrow c}f(x)</m> is a number that <m>f(x)</m> gets closer and closer to when <m>x</m> gets 
+          closer and closer to <m>c</m>. Instead, we will give a precise <em>definition</em> that uses only notions to 
+          which we can already give a precise meaning. In the example of the limit, the notion of "closer and closer" 
+          commonly used in the Calculus course is not clear at all. We may have an intuitive idea, but what precisely
+          do we mean by "closer and closer"?
+          </p>
+          <p>
+          The other important difference with the Calculus course is that it is not
+           enough to say that the derivative of <m>x^n</m>is 
+          <m>nx^{n-1}</m> because that's what the power rule says. We want to know <alert>why</alert> the 
+          power rule is true. In other words, we want to have a  <em>proof</em> of all statements we make.
+          </p>
+          <p> So most of the difference between the Calculus course and the Real Analysis course is that we 
+          will give very precise definitions, and provide proofs for the statements made. This brings us to 
+          an important discussion. You will find a number of courses that are listed
+          as prerequisites for this course, such as the Calculus sequence and the Discrete math course. 
+          While it will of course be helpful to be already familiar with limits, derivatives and integrals 
+          (that you studied in Calculus), in reality we will study all those notions again from scratch and more
+          in depth, without assuming any prior knowledge. But we will need to formulate very precise definitions
+          and provide proofs of the statements. To this end, the Discrete course is a more essential prerequisite.
+          You have been introduced to proofs in that course. In this course we will see how to apply the 
+          skills and techniques for writing proofs to gain a real understanding of the various notions contained
+          in the Calculus course, and just as importantly, to understand why all the rules and the theorems are true.
+          </p> 
+
+      </section>
+
+<section xml:id="sec-1">
+  <title>Review of basic concepts</title>
+
+  <subsection><title> The various types of numbers </title>
+  <p>We assume knowledge of the <em>natural numbers</em>:
+  <me> {\mathbb N}=\{1,2,3,\ldots\},</me>
+  the <em>integers</em>:
+  <me>{\mathbb Z}=\{0, \pm 1, \pm 2, \ldots\},</me>
+  the <em>rational numbers</em>:
+  <me>{\mathbb Q}=\left\{\frac{p}{q}: p\in {\mathbb Z}, q\in {\mathbb N}\right\}.</me>
+  </p>
+  <p> The natural numbers (sometimes also called <em>positive integers</em>) can be added and multiplied. The 
+  number 1 is rather special for two reasons: it's the smallest of all, and it has the nice property that 
+  <m>x\cdot 1=x=1\cdot x</m> for all natural numbers <m>x</m>. 
+  The natural numbers cannot always be subtracted, for example <m>3</m> and <m>5</m> are natural numbers, 
+  but <m>3-5</m> is not.
+  </p>
+  <p>
+  The integers can be added, multiplied and subtracted. Beside 1, they have another special element, <m>0</m>, 
+  that has the property that <m>x+0=x=0+x</m> for all integers <m>x</m>. They cannot always be divided. For example, 
+  <m>2</m> and <m>3</m> are integers, but <m>2/3</m> is not. </p>
+  <p> The rational numbers can be added, multiplied, subtracted,
+  and divided (with the only exception that we cannot divide by <m>0</m>).   So we can do all the usual operations
+  of arithemtic and algebra with the rational numbers. We say that they form a <em>field</em>, a concept that we 
+  will describe more precisely in the next chapter. 
+</p>
+
+<p>
+  So we can do all four operations with the rational numbers. But there is still something missing, and it is not
+  something abstract, but actually quite practical. Suppose we want to build a fence for a field 
+  (as in a corn or strawberry field, not 
+  the math concept of field of the previous paragraph!) so that it will be  a square of area <m>A</m> square feet. 
+  Because the area of a square
+  of side <m>x</m> is <m>A=x^2</m>, this means that we need to solve the equation <m>x^2=A</m>, and the answer 
+  is <m>x=\sqrt{A}</m>. </p>
+  <p> So it is quite of practical use to be able to find the square root of a positive number.
+  But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational 
+  number whose square is <m>2</m>. In other words, <m>\sqrt{2}</m> cannot be a rational number (we will 
+  soon see a proof of this fact). This means that we need to go beyond the rational numbers, and consider a larger 
+  set of numbers, called the Real numbers. These are the numbers that give the name "Real Analysis" to this course.
+</p>
+  </subsection>
+
+<subsection> <title>Logic and proofs</title>
+<p>Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve
+problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations.
+Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often
+neglected. This course will be based on <em>definitions</em>, that precisely introduce and describe a new concept,
+<em>statements</em> (also called theorems, or lemmas, or propositions)  based on these definitions, and <em>proofs</em> 
+of the statements. We will now discuss a little each of these notions. </p>
+
+<p> As mentioned in the previous section,  we need to be precise when making definitions, and we should only use 
+concepts that have already been previously defined. But we need to start somewhere. There are notions that must be 
+treated as understood, without appealing to any other previously 
+defined concepts. Basic examples of these notions are those of <em>set</em><fn> Actually, in a more advanced 
+treatment, the primitive, undefined notion is called a <em>class</em> and a set is defined to be as a class with 
+some desirable properties. See  <url href=" https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set"> 
+this discussion </url> if you are interestd in the difference between classes and sets.
+ But we will consider a set a primitive notion. </fn> and <em>membership</em>. A set is 
+a collection of elements. An element is a member of a set (or it belongs to it, or is contained in it) if it is one
+of the elements that make up the set. These notions are primitive, in the sense that they cannot be explained or
+defined in terms of other notions. We need
+to start from here. In this course, we will also consider the natural numbers, the integers and the rational numbers as 
+already defined. <fn>Again, this is not the case in more advanced treatments, where the natural numbers are defined
+purely in terms of sets 
+(see  <url href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf">
+this lecture</url> for example), then the integers and rational numbers as 
+<url href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf">
+derived concepts</url> </fn>. 
+So <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m> of the previous section are basic examples of sets.
+If <m>A</m> is a set, We will use the notation <m>x\in A</m> to mean that <m>x</m> is an 
+element of <m>A</m>, or that <m>x</m> belongs to <m>A</m>, and <m>x\not \in A</m> to mean that <m>x</m> is not
+an element of <m>A</m>. So for example <m>3\in {\mathbb N}</m> and <m>\frac{1}{2}\not \in {\mathbb Z}</m>. 
+</p>
+  <p>
+But how do we make other sets? Here logic, and other primitive notions, come into play. A <em>statement</em> is 
+any sentence that must be either true or false. So "5 is a natural number" is a true statement, "New York is the
+capital of the United States" is a false statement. But "Who are you?" is not a statement because it makes
+no sense to ask if it is true or false, and  "onions taste good" is not a statement because whether it is true 
+or false depends on who we ask. We will often use symbols with special font, such as <m>\mathscr P</m> or
+<m>\mathscr Q</m>, followed by a colon, to denote statements. So we could write <m>\mathscr P</m>: "5 is a natural number" or
+<m>\mathscr Q</m>: "New York is the capital of the United States". If we write <m>{\mathscr P}(x)</m>, it means
+that the statement <m>\mathscr P</m> depends on whatever <m>x</m> may be. So for example 
+<m>{\mathscr P}(x)</m>: "<m>x</m> is a natural number less than 5" is a statement that is true if <m>x</m> is
+1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <em>variable</em>. Of course a 
+variable need not represent a number. We could consider the statement <m>{\mathscr P}(x)</m>: "<m>x</m> is a student
+in this class", and then <m>x</m> represents a person. 
+    </p>
+<p>A common and useful way to describe sets is the <em>set builder notation</em>. Suppose
+<m>{\mathscr P}(x)</m> is a statement depending on some variable <m>x</m>. We can then consider the set 
+of all possible <m>x</m> that will make <m>{\mathscr P}(x)</m> true, and we denote it by 
+<m>\{x| {\mathscr P}(x)\}</m>. So if <m>{\mathscr P}(x)</m>: "<m>x</m> is a natural number less than 5", then
+<m>\{x| {\mathscr P}(x)\}=\{1,2,3,4\}</m>.
+  </p>
+
+<p>
+  Once we feel comfortable with the notion of a set and what it means for something to belong to it, we can define
+  the basic set operations such as <em>union</em> and <em>intersection</em>. This gives us the opportunity to illustrate
+  our first definition.
+  </p>
+
+  <definition xml:id="def-">
+    <statement>
+      <p>
+ Let <m>A</m> and <m>B</m> be sets. The  <em>union</em> of <m>A</m> and <m>B</m> is the set consisting 
+ of all elements that are either in <m>A</m> or in <m>B</m>, and it is denoted by <m>A\cup B</m>.   The 
+ <em>intersection</em> of  <m>A</m> and <m>B</m> is the set consisting 
+ of all elements that are both in <m>A</m> and in <m>B</m>, and it is denoted by <m>A\cap B</m>.   
+      </p>
+    </statement>
+  </definition>  
+<p>
+  Let's pause a moment to examine what this definition does. First of all, it uses plain English. Then,
+  it has  two 
+  different goals: explain what the new concepts are, <alert>and</alert> assign a name to them. The assigned
+  names are <em>union</em> and <em>intersection</em>. Then, it also introduces some <alert>notation</alert> 
+  in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols
+  <m>\cup</m> and <m>\cap</m> that represent union and intersection, respectively. In summary, a definition
+  often does three things: it explains the meaning of a new concept; it reserves a word or phrase 
+  to be used for it; and (sometimes) it also reserves a symbol to be used for it.
+
+</p>
+
+<p>We stress the fact that plain English was used. This could have been done in a different way.
+ We could have written the definition as follows:</p>
+ <p>
+ <alert> Definition</alert> The  <em>union</em> of <m>A</m> and <m>B</m> is the set <m>A\cup B</m> defined by
+ <me>A\cup B =\{x|x\in A \mbox{ or } x\in B\},</me>
+ and the 
+ <em>intersection</em> of  <m>A</m> and <m>B</m> is the set <m>A\cap B</m> defined by
+ <me>A\cap B =\{x|x\in A \mbox{ and } x\in B\}.</me>
+</p>
+<p> This second way to define union and intersection is perfectly good and correct. But, in this course we will
+prefer to use plain English language whenever possible, in definitions, in statements of theorems, and in proofs.
+This does not mean that we will not use symbols. On the contrary, symbols are very often essential to carry out 
+complex proofs. But they should not be a substitute for words when the concept is more clearly explained or 
+understood without them. Most people who have never heard of union and intersection will more easily understand
+their definition in the one with the words rather than in the one with the symbols. Ideally, and as an often
+useful exercise, we should be able to express in words concepts presented using only symbols, and likewise
+we shoud be able to write in compact symbolic form statements that were made using only words.
+</p>
+
+  </subsection>
+  </section>
+    </chapter>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>
