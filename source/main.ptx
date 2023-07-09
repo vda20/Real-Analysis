@@ -164,14 +164,17 @@ this discussion </url> if you are interestd in the difference between classes an
 a collection of elements. An element is a member of a set (or it belongs to it, or is contained in it) if it is one
 of the elements that make up the set. These notions are primitive, in the sense that they cannot be explained or
 defined in terms of other notions. We need
-to start from here. In this course, we will also consider the natural numbers, the integers and the rational numbers as 
-already defined. <fn>Again, this is not the case in more advanced treatments, where the natural numbers are defined
+to start from here. We will use curly braces <m>\{ \ldots \}</m> to represent what a set contains, as we have already
+done in the notation for <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m> in the previous section.</p>
+<p>
+In this course, the natural number, integers and rational numbers will also be considered 
+ as already defined <fn>Again, this is not the case in more advanced treatments, where the natural numbers are defined
 purely in terms of sets 
 (see  <url href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf">
 this lecture</url> for example), then the integers and rational numbers as 
 <url href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf">
 derived concepts</url> </fn>. 
-So <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m> of the previous section are basic examples of sets.
+So <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m>  are basic examples of sets.
 If <m>A</m> is a set, We will use the notation <m>x\in A</m> to mean that <m>x</m> is an 
 element of <m>A</m>, or that <m>x</m> belongs to <m>A</m>, and <m>x\not \in A</m> to mean that <m>x</m> is not
 an element of <m>A</m>. So for example <m>3\in {\mathbb N}</m> and <m>\frac{1}{2}\not \in {\mathbb Z}</m>. 
@@ -213,10 +216,16 @@ of all possible <m>x</m> that will make <m>{\mathscr P}(x)</m> true, and we deno
       </p>
     </statement>
   </definition>  
+<p>Note that the word "or" in math is used in a different way than it is used in ordinary language. In math, 
+<m>P</m> or <m>Q</m> means either <m>P</m>, or <m>Q</m>, or both. So if <m>x</m> is in <m>A\cup B</m>, then
+<m>x</m> could be in <m>A</m>, or in <m>B</m>, or in both <m>A</m> and <m>B</m>. Compare with the ordinay use of "or" 
+in the sentence "Would you like tea or coffee?". In this sentence it is evident that the choice is understood to
+be between
+one or the other, not both.</p>
 <p>
-  Let's pause a moment to examine what this definition does. First of all, it uses plain English. Then,
-  it has  two 
-  different goals: explain what the new concepts are, <alert>and</alert> assign a name to them. The assigned
+  Let's pause a moment to examine what the above definition of union and intersection does. 
+  First of all, it uses plain English. Then, it does two different things: it explains 
+  what the new concepts are, <alert>and</alert> it assigns a name to them. The assigned
   names are <em>union</em> and <em>intersection</em>. Then, it also introduces some <alert>notation</alert> 
   in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols
   <m>\cup</m> and <m>\cap</m> that represent union and intersection, respectively. In summary, a definition
