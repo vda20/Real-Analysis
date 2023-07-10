@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Review of basic concepts</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Real Analysis">
+<meta property="book:author" content="Valerio De Angelis">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Real Analysis:</span> <span class="subtitle">Math 4050-4060</span></a></h1>
+<p class="byline">Valerio De Angelis</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-title.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-title.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-title.html" class="internal"><span class="codenumber">1.1</span> <span class="title">How is this course different from Calculus?</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="sec-1.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Review of basic concepts</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-1.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">The various types of numbers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-1.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Logic and set theory</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-1"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Review of basic concepts</span>
+</h2>
+<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">The various types of numbers</span>
+</h3>
+<div class="para logical" id="p-6">
+<div class="para">We assume knowledge of the <em class="emphasis">natural numbers</em>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb N}=\{1,2,3,\ldots\},
+\end{equation*}
+</div>
+<div class="para">the <em class="emphasis">integers</em>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb Z}=\{0, \pm 1, \pm 2, \ldots\},
+\end{equation*}
+</div>
+<div class="para">the <em class="emphasis">rational numbers</em>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb Q}=\left\{\frac{p}{q}: p\in {\mathbb Z}, q\in {\mathbb N}\right\}.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-7">The natural numbers (sometimes also called <em class="emphasis">positive integers</em>) can be added and multiplied. The number 1 is rather special for two reasons: it’s the smallest of all, and it has the nice property that <span class="process-math">\(x\cdot 1=x=1\cdot x\)</span> for all natural numbers <span class="process-math">\(x\text{.}\)</span> The natural numbers cannot always be subtracted, for example <span class="process-math">\(3\)</span> and <span class="process-math">\(5\)</span> are natural numbers, but <span class="process-math">\(3-5\)</span> is not.</div>
+<div class="para" id="p-8">The integers can be added, multiplied and subtracted. Beside 1, they have another special element, <span class="process-math">\(0\text{,}\)</span> that has the property that <span class="process-math">\(x+0=x=0+x\)</span> for all integers <span class="process-math">\(x\text{.}\)</span> They cannot always be divided. For example, <span class="process-math">\(2\)</span> and <span class="process-math">\(3\)</span> are integers, but <span class="process-math">\(2/3\)</span> is not.</div>
+<div class="para" id="p-9">The rational numbers can be added, multiplied, subtracted, and divided (with the only exception that we cannot divide by <span class="process-math">\(0\)</span>).   So we can do all the usual operations of arithemtic and algebra with the rational numbers. We say that they form a <em class="emphasis">field</em>, a concept that we will describe more precisely in the next chapter.</div>
+<div class="para" id="p-10">So we can do all four operations with the rational numbers. But there is still something missing, and it is not something abstract, but actually quite practical. Suppose we want to build a fence for a field (as in a corn or strawberry field, not the math concept of field of the previous paragraph!) so that it will be  a square of area <span class="process-math">\(A\)</span> square feet. Because the area of a square of side <span class="process-math">\(x\)</span> is <span class="process-math">\(A=x^2\text{,}\)</span> this means that we need to solve the equation <span class="process-math">\(x^2=A\text{,}\)</span> and the answer is <span class="process-math">\(x=\sqrt{A}\text{.}\)</span>
+</div>
+<div class="para" id="p-11">So it is quite of practical use to be able to find the square root of a positive number. But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational number whose square is <span class="process-math">\(2\text{.}\)</span> In other words, <span class="process-math">\(\sqrt{2}\)</span> cannot be a rational number (we will soon see a proof of this fact). This means that we need to go beyond the rational numbers, and consider a larger set of numbers, called the Real numbers. These are the numbers that give the name "Real Analysis" to this course.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Logic and set theory</span>
+</h3>
+<div class="para" id="p-12">Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations. Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often neglected. This course will be based on <em class="emphasis">definitions</em>, that precisely introduce and describe a new concept, <em class="emphasis">statements</em> (also called theorems, or lemmas, or propositions)  based on these definitions, and <em class="emphasis">proofs</em> of the statements. We will now discuss a little each of these notions.</div>
+<div class="para" id="p-13">As mentioned in the previous section,  we need to be precise when making definitions, and we should only use concepts that have already been previously defined. But we need to start somewhere. There are notions that must be treated as understood, without appealing to any other previously defined concepts. Basic examples of these notions are those of <em class="emphasis">set</em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> and <em class="emphasis">membership</em>. A set is a collection of elements. An element is a member of a set (or it belongs to it, or is contained in it) if it is one of the elements that make up the set. These notions are primitive, in the sense that they cannot be explained or defined in terms of other notions. We need to start from here. We will use curly braces <span class="process-math">\(\{ \ldots \}\)</span> to represent what a set contains, as we have already done in the notation for <span class="process-math">\(\mathbb N\text{,}\)</span> <span class="process-math">\(\mathbb Z\)</span> and <span class="process-math">\(\mathbb Q\)</span> in the previous section.</div>
+<div class="para" id="p-14">In this course, the natural number, integers and rational numbers will also be considered as already defined <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 3 </sup></a>. So <span class="process-math">\(\mathbb N\text{,}\)</span> <span class="process-math">\(\mathbb Z\)</span> and <span class="process-math">\(\mathbb Q\)</span>  are basic examples of sets. If <span class="process-math">\(A\)</span> is a set, we will use the notation <span class="process-math">\(x\in A\)</span> to mean that <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(A\text{,}\)</span> or that <span class="process-math">\(x\)</span> belongs to <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(x\not \in A\)</span> to mean that <span class="process-math">\(x\)</span> is not an element of <span class="process-math">\(A\text{.}\)</span> So for example <span class="process-math">\(3\in {\mathbb N}\)</span> and <span class="process-math">\(\frac{1}{2}\not \in {\mathbb Z}\text{.}\)</span>
+</div>
+<div class="para" id="p-15">But how do we make other sets? Here logic, and other primitive notions, come into play. A <em class="emphasis">statement</em> is any sentence that must be either true or false. So "5 is a natural number" is a true statement, "New York is the capital of the United States" is a false statement. But "Who are you?" is not a statement because it makes no sense to ask if it is true or false, and  "onions taste good" is not a statement because whether it is true or false depends on who we ask. We will often use symbols with special font, such as <span class="process-math">\(\cal P\)</span> or <span class="process-math">\(\cal Q\text{,}\)</span> followed by a colon, to denote statements. So we could write <span class="process-math">\(\cal P\text{:}\)</span> "5 is a natural number" or <span class="process-math">\(\cal Q\text{:}\)</span> "New York is the capital of the United States". If we write <span class="process-math">\({\cal P}(x)\text{,}\)</span> it means that the statement <span class="process-math">\(\cal P\)</span> depends on whatever <span class="process-math">\(x\)</span> may be. So for example <span class="process-math">\({\cal P}(x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is a natural number less than 5" is a statement that is true if <span class="process-math">\(x\)</span> is 1,2,3 or 4, but it is false otherwise. In this situation we call <span class="process-math">\(x\)</span> a <em class="emphasis">variable</em>. Of course a variable need not represent a number. We could consider the statement <span class="process-math">\({\cal P}(x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is a student in this class", and then <span class="process-math">\(x\)</span> represents a person.</div>
+<div class="para" id="p-16">A common and useful way to describe sets is the <em class="emphasis">set builder notation</em>. Suppose <span class="process-math">\({\cal P}(x)\)</span> is a statement depending on some variable <span class="process-math">\(x\text{.}\)</span> We can then consider the set of all possible <span class="process-math">\(x\)</span> that will make <span class="process-math">\({\cal P}(x)\)</span> true, and we denote it by <span class="process-math">\(\{x| {\cal P}(x)\}\text{.}\)</span> So if <span class="process-math">\({\cal P}(x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is a natural number less than 5", then <span class="process-math">\(\{x| {\cal P}(x)\}=\{1,2,3,4\}\text{.}\)</span>
+</div>
+<div class="para" id="p-17">Once we feel comfortable with the notion of a set and what it means for something to belong to it, we can define the basic set operations such as <em class="emphasis">union</em> and <em class="emphasis">intersection</em>. This gives us the opportunity to illustrate our first definition.</div>
+<article class="definition definition-like" id="def-"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-18">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be sets. The  <em class="emphasis">union</em> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set consisting of all elements that are either in <span class="process-math">\(A\)</span> or in <span class="process-math">\(B\text{,}\)</span> and it is denoted by <span class="process-math">\(A\cup B\text{.}\)</span>   The <em class="emphasis">intersection</em> of  <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set consisting of all elements that are both in <span class="process-math">\(A\)</span> and in <span class="process-math">\(B\text{,}\)</span> and it is denoted by <span class="process-math">\(A\cap B\text{.}\)</span>
+</div></article><div class="para" id="p-19">Note that the word "or" in math is used in a different way than it is used in ordinary language. In math, <span class="process-math">\(\cal P\)</span> or <span class="process-math">\(\cal Q\)</span> means either <span class="process-math">\(\cal P\text{,}\)</span> or <span class="process-math">\(\cal Q\text{,}\)</span> or both. So if <span class="process-math">\(x\)</span> is in <span class="process-math">\(A\cup B\text{,}\)</span> then <span class="process-math">\(x\)</span> could be in <span class="process-math">\(A\text{,}\)</span> or in <span class="process-math">\(B\text{,}\)</span> or in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Compare with the ordinay use of "or" in the sentence "Would you like tea or coffee?". In this sentence it is evident that the choice is understood to be between one or the other, not both.</div>
+<div class="para" id="p-20">Let’s pause a moment to examine what the above definition of union and intersection does. First of all, it uses plain English. Then, it does two different things: it explains what the new concepts are, <em class="alert">and</em> it assigns a name to them. The assigned names are <em class="emphasis">union</em> and <em class="emphasis">intersection</em>. Then, it also introduces some <em class="alert">notation</em> in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols <span class="process-math">\(\cup\)</span> and <span class="process-math">\(\cap\)</span> that represent union and intersection, respectively. In summary, a definition often does three things: it explains the meaning of a new concept; it reserves a word or phrase to be used for it; and (sometimes) it also reserves a symbol to be used for it.</div>
+<div class="para" id="p-21">We stress the fact that plain English was used. This could have been done in a different way. We could have written the definition as follows:</div>
+<div class="para logical" id="p-22">
+<div class="para">
+<em class="alert">Definition</em> The  <em class="emphasis">union</em> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set <span class="process-math">\(A\cup B\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\cup B =\{x|x\in A \mbox{ or } x\in B\},
+\end{equation*}
+</div>
+<div class="para">and the <em class="emphasis">intersection</em> of  <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set <span class="process-math">\(A\cap B\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\cap B =\{x|x\in A \mbox{ and } x\in B\}.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-23">This second way to define union and intersection is perfectly good and correct. But, in this course we will prefer to use plain English language whenever possible, in definitions, in statements of theorems, and in proofs. This does not mean that we will not use symbols. On the contrary, symbols are very often essential to carry out complex proofs. But they should not be a substitute for words when the concept is more clearly explained or understood without them. Most people who have never heard of union and intersection will more easily understand their definition in the one with the words rather than in the one with the symbols. It is often useful, as an exercise, to express in words concepts presented using only symbols, and likewise to write in compact symbolic form statements that were made using only words.</div>
+<div class="para" id="p-24">Before we proceed with more definitions, we need to review some logic. If <span class="process-math">\(\cal P\)</span> is a statement, we denote by <span class="process-math">\(\sim \cal P\)</span> its negation. So <span class="process-math">\(\sim \cal P\)</span> is true when <span class="process-math">\(\cal P\)</span> is false, and <span class="process-math">\(\sim \cal P\)</span> is false when <span class="process-math">\(\cal P\)</span> is true. For example, if <span class="process-math">\({\cal P} (x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is an integer greater than 1" then <span class="process-math">\(\sim {\cal P} (x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is an integer less than or equal to 1".</div>
+<div class="para" id="p-25">If <span class="process-math">\(\cal P\)</span> and <span class="process-math">\(\cal Q\)</span> are statements, we can construct another statement, called an <em class="emphasis">implication</em> denoted by <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> that is false <em class="alert">only when</em> <span class="process-math">\(\cal P\)</span> is true and <span class="process-math">\(\cal Q\)</span> is false. In all other cases it is true. We read this  as "<span class="process-math">\(\cal P\)</span> implies <span class="process-math">\(\cal Q\)</span>", or "If <span class="process-math">\(\cal P\text{,}\)</span> then <span class="process-math">\(\cal Q\text{.}\)</span>" The logic is that we are thinking that if <span class="process-math">\(\cal P\)</span> is true, then  <span class="process-math">\(\cal Q\)</span> must also be true, or that  <span class="process-math">\(\cal Q\)</span> follows from <span class="process-math">\(\cal P\text{.}\)</span>
+</div>
+<div class="para" id="p-26">To understand why we say that the statement <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> is always true except in the case that <span class="process-math">\(\cal P\)</span> is true and <span class="process-math">\(\cal Q\)</span> is false, think of it as a promise. So suppose <span class="process-math">\(\cal P\)</span> is the statement "the New Orleans Saints win the game" and <span class="process-math">\(\cal Q\)</span> is the statement "Dustin will take Jasmine out to dinner". Then <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> is the promise that if the Saints win the game, Dustin will take Jasmine out to dinner. How can this promise be broken? Only if the Saints win, and yet Dustin does not take Jasmine out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> remains true for sure, whether or not Dustin takes Jasmine out to dinner, because there is no broken promise. This logical property of implications is sometimes referred to by saying that "a false statement implies anything".</div>
+<div class="para logical" id="p-27">
+<div class="para">
+<span class="process-math">\({\cal P} \Longleftrightarrow {\cal Q}\)</span> means that <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> and <span class="process-math">\({\cal Q}\Rightarrow {\cal P}\text{.}\)</span> In this case we say that <span class="process-math">\(\cal P\)</span> and <span class="process-math">\(\cal Q\)</span> are <em class="emphasis">equivalent</em>.  Here is an example from elementary Algebra. Suppose that <span class="process-math">\(x\)</span> is a rational number. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3x=4 \Longleftrightarrow x=\frac{4}{3}.
+\end{equation*}
+</div>
+<div class="para">In fact, all the steps involved in solving Algebra or Calculus problems are mostly sequences of equivalent statements of this type.</div>
+</div>
+<div class="para logical" id="p-28">
+<div class="para">The negation of <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> is often useful when writing proofs. It must be a statement that is true precisely when <span class="process-math">\({\cal P} \Rightarrow {\cal Q}\)</span> is false, and we know that this happens only when <span class="process-math">\({\cal P}\)</span> is true and  <span class="process-math">\({\cal Q}\)</span> is false. So we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sim({\cal P} \Rightarrow {\cal Q}) \Longleftrightarrow ({\cal P} \mbox{ and } \sim {\cal Q}).
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-29">
+<div class="para">Another useful logical equivalence is :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+({\cal P} \Rightarrow {\cal Q }) \Longleftrightarrow (\sim {\cal Q} \Rightarrow \sim {\cal P}).
+\end{equation*}
+</div>
+<div class="para">To understand this using the same example as before, saying "If the Saints win the game, Dustin takes Jasmine to dinner" is the same as saying "If Dustin doesn’t take Jasmine to dinner, the Saints have lost the game".</div>
+</div>
+<div class="para logical" id="p-30">
+<div class="para">We will now give a few more especially important definitions. A complete treatment of set theory can be found in many freely avaialble online sources such as <a class="external" href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html" target="_blank">this textbook on Discrete Mathematics</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 6 </sup></a>. <article class="definition definition-like" id="def-subset"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-31">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, we say that <span class="process-math">\(A\)</span> is a <em class="emphasis">subset</em> of <span class="process-math">\(B\)</span> if every element of <span class="process-math">\(A\)</span> is also an element of <span class="process-math">\(B\text{,}\)</span> and in this case we write <span class="process-math">\(A\subset B\text{.}\)</span>
+</div></article> Note again how this definition provides three pieces of information: the explanation of a new concept, its name in English (subset) and the symbol used <span class="process-math">\(\subset\text{.}\)</span> We can make the same definition using only symbols:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A\subset B) \Longleftrightarrow (x\in A \Rightarrow x\in B).
+\end{equation*}
+</div>
+<div class="para">So we can write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb N}\subset {\mathbb Z} \subset {\mathbb Q}.
+\end{equation*}
+</div>
+</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Actually, in a more advanced treatment, the primitive, undefined notion is called a <em class="emphasis">class</em> and a set is defined to be a class with some desirable properties. See  <a class="external" href="https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set" target="_blank">this discussion</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a> if you are interestd in the difference between classes and sets. But we will consider a set a primitive notion.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore"> https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Again, this is not the case in more advanced treatments, where the natural numbers are defined purely in terms of sets (see  <a class="external" href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf" target="_blank">this lecture</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 4 </sup></a> for example), then the integers and rational numbers as <a class="external" href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf" target="_blank">derived concepts</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 5 </sup></a>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">discrete.openmathbooks.org/dmoi3/sec_intro-sets.html</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-title.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
