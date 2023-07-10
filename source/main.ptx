@@ -157,7 +157,7 @@ of the statements. We will now discuss a little each of these notions. </p>
 concepts that have already been previously defined. But we need to start somewhere. There are notions that must be 
 treated as understood, without appealing to any other previously 
 defined concepts. Basic examples of these notions are those of <em>set</em><fn> Actually, in a more advanced 
-treatment, the primitive, undefined notion is called a <em>class</em> and a set is defined to be as a class with 
+treatment, the primitive, undefined notion is called a <em>class</em> and a set is defined to be a class with 
 some desirable properties. See  <url href=" https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set"> 
 this discussion </url> if you are interestd in the difference between classes and sets.
  But we will consider a set a primitive notion. </fn> and <em>membership</em>. A set is 
@@ -175,7 +175,7 @@ this lecture</url> for example), then the integers and rational numbers as
 <url href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf">
 derived concepts</url> </fn>. 
 So <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m>  are basic examples of sets.
-If <m>A</m> is a set, We will use the notation <m>x\in A</m> to mean that <m>x</m> is an 
+If <m>A</m> is a set, we will use the notation <m>x\in A</m> to mean that <m>x</m> is an 
 element of <m>A</m>, or that <m>x</m> belongs to <m>A</m>, and <m>x\not \in A</m> to mean that <m>x</m> is not
 an element of <m>A</m>. So for example <m>3\in {\mathbb N}</m> and <m>\frac{1}{2}\not \in {\mathbb Z}</m>. 
 </p>
@@ -217,7 +217,7 @@ of all possible <m>x</m> that will make <m>{\cal P}(x)</m> true, and we denote i
     </statement>
   </definition>  
 <p>Note that the word "or" in math is used in a different way than it is used in ordinary language. In math, 
-<m>P</m> or <m>Q</m> means either <m>P</m>, or <m>Q</m>, or both. So if <m>x</m> is in <m>A\cup B</m>, then
+<m>\cal P</m> or <m>\cal Q</m> means either <m>\cal P</m>, or <m>\cal Q</m>, or both. So if <m>x</m> is in <m>A\cup B</m>, then
 <m>x</m> could be in <m>A</m>, or in <m>B</m>, or in both <m>A</m> and <m>B</m>. Compare with the ordinay use of "or" 
 in the sentence "Would you like tea or coffee?". In this sentence it is evident that the choice is understood to
 be between
@@ -248,9 +248,9 @@ prefer to use plain English language whenever possible, in definitions, in state
 This does not mean that we will not use symbols. On the contrary, symbols are very often essential to carry out 
 complex proofs. But they should not be a substitute for words when the concept is more clearly explained or 
 understood without them. Most people who have never heard of union and intersection will more easily understand
-their definition in the one with the words rather than in the one with the symbols. Ideally, and as an often
-useful exercise, we should be able to express in words concepts presented using only symbols, and likewise
-we shoud be able to write in compact symbolic form statements that were made using only words.
+their definition in the one with the words rather than in the one with the symbols. It is often useful, as
+an exercise, to express in words concepts presented using only symbols, and likewise
+ to write in compact symbolic form statements that were made using only words.
 </p>
 
 <p> Before we proceed with more definitions, we need to review some logic. If <m>\cal P</m> is a statement, we
@@ -262,20 +262,45 @@ greater than 1" then <m>\sim {\cal P} (x)</m>: "<m>x</m> is an integer less than
 <p>
   If <m>\cal P</m> and <m>\cal Q</m> are statements, we can construct another statement, 
   called an <em>implication</em> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
-  <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. The logic is that we
-  are thinking that <m>\cal P</m> implies <m>\cal Q</m>, or that <m>\cal Q</m> follows from <m>\cal P</m>.
+  <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. In all other cases it is true. 
+  We read this  as "<m>\cal P</m> implies <m>\cal Q</m>", or "If <m>\cal P</m>, then <m>\cal Q</m>."
+  The logic is that we
+  are thinking that if <m>\cal P</m> is true, then  <m>\cal Q</m> must also be true, or
+  that  <m>\cal Q</m> follows from <m>\cal P</m>.
+  </p>
+  <p>
   To understand why we say that the statement <m>{\cal P} \Rightarrow {\cal Q}</m> is always true except in the
   case that <m>\cal P</m> is true and <m>\cal Q</m> is false, think of it as a promise. So suppose 
   <m>\cal P</m> is the statement "the New Orleans Saints win the game" and <m>\cal Q</m> is the
-  statement "I will take you out to dinner". Then 
+  statement "Dustin will take Jasmine out to dinner". Then 
   <m>{\cal P} \Rightarrow {\cal Q}</m> is the promise that if the Saints win the game, 
-  I will take you out to dinner. How can this promise be broken? Only if the Saints win, and yet I do not take
-  you out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement 
-  <m>{\cal P} \Rightarrow {\cal Q}</m> remains true for sure, whether or not I take you out for dinner, 
+ Dustin will take Jasmine out to dinner. How can this promise be broken? Only if the Saints win, and yet Dustin 
+  does not take Jasmine out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement 
+  <m>{\cal P} \Rightarrow {\cal Q}</m> remains true for sure, whether or not Dustin takes Jasmine out to dinner, 
   because there is no broken promise.
-  This logical property of implications is sometimes referred to by saying that "a false statement implies anything". 
-
+  This logical property of implications is sometimes referred to by saying that "a false statement implies anything".
+  </p>
+  <p>
+  <m>{\cal P} \Longleftrightarrow {\cal Q}</m> means that <m>{\cal P} \Rightarrow {\cal Q}</m> and <m>{\cal Q}\Rightarrow {\cal P}</m>. 
+  In this case we say that <m>\cal P</m> and <m>\cal Q</m> are <em>equivalent</em>.  Here is an example from 
+  elementary Algebra. Suppose that <m>x</m> is a rational number. Then
+  <me> 3x=4 \Longleftrightarrow x=\frac{4}{3}.</me> 
+  In fact, all the steps involved in solving Algebra or Calculus problems are mostly sequences of equivalent 
+  statements of this type.  
 </p>
+<p>
+The negation of <m>{\cal P} \Rightarrow {\cal Q}</m> is often useful when writing proofs. It must be a statement
+that is true precisely when <m>{\cal P} \Rightarrow {\cal Q}</m> is false, and we know that this happens 
+only when <m>{\cal P}</m> is true and  <m>{\cal Q}</m> is false. So we see that
+<me> \sim({\cal P} \Rightarrow {\cal Q}) \Longleftrightarrow ({\cal P} \mbox{ and } \sim {\cal Q}).</me>
+</p>
+<p>
+Another useful logical equivalence is :
+<me>({\cal P} \Rightarrow {\cal Q }) \Longleftrightarrow (\sim {\cal Q} \Rightarrow \sim {\cal P}).</me>
+To understand this using the same example as before, saying "If the Saints win the game, Dustin takes Jasmine to dinner" 
+is the same as saying "If Dustin doesn't take Jasmine to dinner, the Saints have lost the game".
+</p>
+
 <p>
 We will now give a few more especially important definitions. A complete treatment of set theory can be found
 in many freely avaialble online sources such as <url href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">
@@ -290,12 +315,41 @@ this textbook on Discrete Mathematics</url>.
 </definition>
 Note again how this definition provides three pieces of information: the explanation of a new concept, 
 its name in English (subset) and the symbol used <m>\subset</m>. We can make the same definition using only symbols:
-
+<me>(A\subset B) \Longleftrightarrow (x\in A \Rightarrow x\in B).</me> 
+So we can write 
+<me>{\mathbb N}\subset {\mathbb Z} \subset {\mathbb Q}.</me>
   </p>
   </subsection>
 
 
   </section>
+
+
+<section><title> Writing proofs</title>
+<p>
+  The purpose of a proof in mathematics is to convince a reader (or a listener) that a certain statement is true. 
+  So, besides being correct, it must be understandable and as easy as possible to follow. 
+  Usually we are interested in proving that a statement of the form <m>{\cal P} \Rightarrow {\cal Q}</m> is true,
+  where <m>\cal P</m> is statement contianing all the <em>assumptions</em> and <m>\cl Q</m> is a statement 
+  containing the <em>conclusions</em>. We will discuss four different types of proofs, with examples.
+
+  </p>
+
+  <subsection>
+    <title>Direct proofs</title>
+    <p>
+In this tyoe of proof, if we want to prove that  <m>{\cal P} \Rightarrow {\cal Q}</m> is true, we  
+derive logical consequences from the assumptions contained in <m>\cal P</m> until we reach the conclusion 
+that <m>\cal Q</m> is true. 
+      </p>
+      <example>
+      </example>
+    
+    </subsection>>
+</section>
+
+
+
     </chapter>
 
     <backmatter xml:id="backmatter">
