@@ -319,6 +319,11 @@ its name in English (subset) and the symbol used <m>\subset</m>. We can make the
 So we can write 
 <me>{\mathbb N}\subset {\mathbb Z} \subset {\mathbb Q}.</me>
   </p>
+
+<p>
+<definition>
+</definition>
+</p>
   </subsection>
 
 
@@ -330,7 +335,7 @@ So we can write
   The purpose of a proof in mathematics is to convince a reader (or a listener) that a certain statement is true. 
   So, besides being correct, it must be understandable and as easy as possible to follow. 
   Usually we are interested in proving that a statement of the form <m>{\cal P} \Rightarrow {\cal Q}</m> is true,
-  where <m>\cal P</m> is statement contianing all the <em>assumptions</em> and <m>\cl Q</m> is a statement 
+  where <m>\cal P</m> is statement containing all the <em>assumptions</em> and <m>\cal Q</m> is a statement 
   containing the <em>conclusions</em>. We will discuss four different types of proofs, with examples.
 
   </p>
@@ -338,11 +343,13 @@ So we can write
   <subsection>
     <title>Direct proofs</title>
     <p>
-In this tyoe of proof, if we want to prove that  <m>{\cal P} \Rightarrow {\cal Q}</m> is true, we  
+In this type of proof, if we want to prove that  <m>{\cal P} \Rightarrow {\cal Q}</m> is true, we  
 derive logical consequences from the assumptions contained in <m>\cal P</m> until we reach the conclusion 
 that <m>\cal Q</m> is true. 
       </p>
       <example>
+
+    Suppose that <m>n</m> is an even integer. Prove that <m>3n</m> is divisible by 6.
       </example>
     
     </subsection>>
