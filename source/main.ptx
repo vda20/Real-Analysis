@@ -54,7 +54,7 @@
         <title>How is this course different from Calculus?</title>
         <p>A large portion of this course will consist in studying real numbers, functions of a real variable, 
         continuity, limits, derivatives and integrals. So what is the difference with the Calculus course?
-        Maybe an example will be useful to explain the difference. Suppose Jasmine has just taken the Calculus course,
+        An example will be useful to explain the difference. Suppose Jasmine has just taken the Calculus course,
         and  she is helping Kevin with this problem: If <m>f(x)=x^{10}</m>, find <m>f'(x)</m>. Jasmine solves
          the problem and gets the right answer: using the power rule,
           she finds that <m>f'(x)=10x^9</m>. This is what she learned in the 
@@ -76,7 +76,7 @@
           </p>
           <p>In Real Analysis, we will give a very precise meaning to all notions we meet. So it is not enough to say
           that <m>\displaystyle \lim_{x\rightarrow c}f(x)</m> is a number that <m>f(x)</m> gets closer and closer to when <m>x</m> gets 
-          closer and closer to <m>c</m>. Instead, we will give a precise <em>definition</em> that uses only notions to 
+          closer and closer to <m>c</m>. Instead, we will give a precise <term>definition</term> that uses only notions to 
           which we can already give a precise meaning. In the example of the limit, the notion of "closer and closer" 
           commonly used in the Calculus course is not clear at all. We may have an intuitive idea, but what precisely
           do we mean by "closer and closer"?
@@ -85,7 +85,7 @@
           The other important difference with the Calculus course is that it is not
            enough to say that the derivative of <m>x^n</m>is 
           <m>nx^{n-1}</m> because that's what the power rule says. We want to know <alert>why</alert> the 
-          power rule is true. In other words, we want to have a  <em>proof</em> of all statements we make.
+          power rule is true. In other words, we want to have a  <term>proof</term> of all statements we make.
           </p>
           <p> So most of the difference between the Calculus course and the Real Analysis course is that we 
           will give very precise definitions, and provide proofs for the statements made. This brings us to 
@@ -102,18 +102,16 @@
 
       </section>
 
-<section xml:id="sec-1">
-  <title>Review of basic concepts</title>
 
-  <subsection><title> The various types of numbers </title>
-  <p>We assume knowledge of the <em>natural numbers</em>:
+  <section><title> The various types of numbers </title>
+  <p>We assume knowledge of the <term>natural numbers</term>:
   <me> {\mathbb N}=\{1,2,3,\ldots\},</me>
-  the <em>integers</em>:
+  the <term>integers</term>:
   <me>{\mathbb Z}=\{0, \pm 1, \pm 2, \ldots\},</me>
-  the <em>rational numbers</em>:
+  the <term>rational numbers</term>:
   <me>{\mathbb Q}=\left\{\frac{p}{q}: p\in {\mathbb Z}, q\in {\mathbb N}\right\}.</me>
   </p>
-  <p> The natural numbers (sometimes also called <em>positive integers</em>) can be added and multiplied. The 
+  <p> The natural numbers (sometimes also called <term>positive integers</term>) can be added and multiplied. The 
   number 1 is rather special for two reasons: it's the smallest of all, and it has the nice property that 
   <m>x\cdot 1=x=1\cdot x</m> for all natural numbers <m>x</m>. 
   The natural numbers cannot always be subtracted, for example <m>3</m> and <m>5</m> are natural numbers, 
@@ -125,7 +123,7 @@
   <m>2</m> and <m>3</m> are integers, but <m>2/3</m> is not. </p>
   <p> The rational numbers can be added, multiplied, subtracted,
   and divided (with the only exception that we cannot divide by <m>0</m>).   So we can do all the usual operations
-  of arithemtic and algebra with the rational numbers. We say that they form a <em>field</em>, a concept that we 
+  of arithemtic and algebra with the rational numbers. We say that they form a <term>field</term>, a concept that we 
   will describe more precisely in the next chapter. 
 </p>
 
@@ -137,30 +135,32 @@
   Because the area of a square
   of side <m>x</m> is <m>A=x^2</m>, this means that we need to solve the equation <m>x^2=A</m>, and the answer 
   is <m>x=\sqrt{A}</m>. </p>
-  <p> So it is quite of practical use to be able to find the square root of a positive number.
+  <p> So being able to find the square root of a positive number is of practical use.
   But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational 
   number whose square is <m>2</m>. In other words, <m>\sqrt{2}</m> cannot be a rational number (we will 
   soon see a proof of this fact). This means that we need to go beyond the rational numbers, and consider a larger 
   set of numbers, called the Real numbers. These are the numbers that give the name "Real Analysis" to this course.
 </p>
-  </subsection>
+</section>
 
-<subsection> <title>Logic and set theory</title>
+
+
+<section> <title>Logic and set theory</title>
 <p>Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve
 problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations.
 Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often
-neglected. This course will be based on <em>definitions</em>, that precisely introduce and describe a new concept,
-<em>statements</em> (also called theorems, or lemmas, or propositions)  based on these definitions, and <em>proofs</em> 
+neglected. This course will be based on <term>definitions</term>, that precisely introduce and describe a new concept,
+<term>statements</term> (also called theorems, or lemmas, or propositions)  based on these definitions, and <term>proofs</term> 
 of the statements. We will now discuss a little each of these notions. </p>
 
 <p> As mentioned in the previous section,  we need to be precise when making definitions, and we should only use 
 concepts that have already been previously defined. But we need to start somewhere. There are notions that must be 
 treated as understood, without appealing to any other previously 
-defined concepts. Basic examples of these notions are those of <em>set</em><fn> Actually, in a more advanced 
-treatment, the primitive, undefined notion is called a <em>class</em> and a set is defined to be a class with 
+defined concepts. Basic examples of these notions are those of <term>set</term><fn> Actually, in a more advanced 
+treatment, the primitive, undefined notion is called a <term>class</term> and a set is defined to be a class with 
 some desirable properties. See  <url href=" https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set"> 
 this discussion </url> if you are interestd in the difference between classes and sets.
- But we will consider a set a primitive notion. </fn> and <em>membership</em>. A set is 
+ But we will consider a set a primitive notion. </fn> and <term>membership</term>. A set is 
 a collection of elements. An element is a member of a set (or it belongs to it, or is contained in it) if it is one
 of the elements that make up the set. These notions are primitive, in the sense that they cannot be explained or
 defined in terms of other notions. We need
@@ -180,7 +180,7 @@ element of <m>A</m>, or that <m>x</m> belongs to <m>A</m>, and <m>x\not \in A</m
 an element of <m>A</m>. So for example <m>3\in {\mathbb N}</m> and <m>\frac{1}{2}\not \in {\mathbb Z}</m>. 
 </p>
   <p>
-But how do we make other sets? Here logic, and other primitive notions, come into play. A <em>statement</em> is 
+But how do we make other sets? Here logic, and other primitive notions, come into play. A <term>statement</term> is 
 any sentence that must be either true or false. So "5 is a natural number" is a true statement, "New York is the
 capital of the United States" is a false statement. But "Who are you?" is not a statement because it makes
 no sense to ask if it is true or false, and  "onions taste good" is not a statement because whether it is true 
@@ -189,29 +189,36 @@ or false depends on who we ask. We will often use symbols with special font, suc
 <m>\cal Q</m>: "New York is the capital of the United States". If we write <m>{\cal P}(x)</m>, it means
 that the statement <m>\cal P</m> depends on whatever <m>x</m> may be. So for example 
 <m>{\cal P}(x)</m>: "<m>x</m> is a natural number less than 5" is a statement that is true if <m>x</m> is
-1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <em>variable</em>. Of course a 
+1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <term>variable</term>. Of course a 
 variable need not represent a number. We could consider the statement <m>{\cal P}(x)</m>: "<m>x</m> is a student
 in this class", and then <m>x</m> represents a person. 
     </p>
-<p>A common and useful way to describe sets is the <em>set builder notation</em>. Suppose
+<p>A common and useful way to describe sets is the <term>set builder notation</term>. Suppose
 <m>{\cal P}(x)</m> is a statement depending on some variable <m>x</m>. We can then consider the set 
 of all possible <m>x</m> that will make <m>{\cal P}(x)</m> true, and we denote it by 
-<m>\{x| {\cal P}(x)\}</m>. So if <m>{\cal P}(x)</m>: "<m>x</m> is a natural number less than 5", then
-<m>\{x| {\cal P}(x)\}=\{1,2,3,4\}</m>.
+<m>\{x| {\cal P}(x)\}</m>. So if 
+<me>{\cal P}(x): x \mbox{ is a natural number less than 5},</me> then
+<me>\{x| {\cal P}(x)\}=\{1,2,3,4\}.</me>
+The vertical bar <m>|</m> in the expression <m>\{x|{\cal P}(x)\}</m> is read <q>such that</q>. 
+So we would read the expression as <q>The set of all <m>x</m> such that <m>{\cal P}(x)</m> is true.</q>
+Sometimes we may also include some information about <m>x</m> before the vertical bar, and then we need less 
+information in the statement <m>{\cal P}(x)</m>. So we could write the above example as
+<me>\{x\in {\mathbb N}| x\lt 5\}.</me>
+It is still the same set, <m>\{1,2,3,4\}</m>.
   </p>
 
 <p>
   Once we feel comfortable with the notion of a set and what it means for something to belong to it, we can define
-  the basic set operations such as <em>union</em> and <em>intersection</em>. This gives us the opportunity to illustrate
+  the basic set operations such as <term>union</term> and <term>intersection</term>. This gives us the opportunity to illustrate
   our first definition.
   </p>
 
   <definition xml:id="def-">
     <statement>
       <p>
- Let <m>A</m> and <m>B</m> be sets. The  <em>union</em> of <m>A</m> and <m>B</m> is the set consisting 
+ Let <m>A</m> and <m>B</m> be sets. The  <term>union</term> of <m>A</m> and <m>B</m> is the set consisting 
  of all elements that are either in <m>A</m> or in <m>B</m>, and it is denoted by <m>A\cup B</m>.   The 
- <em>intersection</em> of  <m>A</m> and <m>B</m> is the set consisting 
+ <term>intersection</term> of  <m>A</m> and <m>B</m> is the set consisting 
  of all elements that are both in <m>A</m> and in <m>B</m>, and it is denoted by <m>A\cap B</m>.   
       </p>
     </statement>
@@ -226,7 +233,7 @@ one or the other, not both.</p>
   Let's pause a moment to examine what the above definition of union and intersection does. 
   First of all, it uses plain English. Then, it does two different things: it explains 
   what the new concepts are, <alert>and</alert> it assigns a name to them. The assigned
-  names are <em>union</em> and <em>intersection</em>. Then, it also introduces some <alert>notation</alert> 
+  names are <term>union</term> and <term>intersection</term>. Then, it also introduces some <alert>notation</alert> 
   in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols
   <m>\cup</m> and <m>\cap</m> that represent union and intersection, respectively. In summary, a definition
   often does three things: it explains the meaning of a new concept; it reserves a word or phrase 
@@ -237,10 +244,10 @@ one or the other, not both.</p>
 <p>We stress the fact that plain English was used. This could have been done in a different way.
  We could have written the definition as follows:</p>
  <p>
- <alert> Definition</alert> The  <em>union</em> of <m>A</m> and <m>B</m> is the set <m>A\cup B</m> defined by
+ <alert> Definition</alert> The  <term>union</term> of <m>A</m> and <m>B</m> is the set <m>A\cup B</m> defined by
  <me>A\cup B =\{x|x\in A \mbox{ or } x\in B\},</me>
  and the 
- <em>intersection</em> of  <m>A</m> and <m>B</m> is the set <m>A\cap B</m> defined by
+ <term>intersection</term> of  <m>A</m> and <m>B</m> is the set <m>A\cap B</m> defined by
  <me>A\cap B =\{x|x\in A \mbox{ and } x\in B\}.</me>
 </p>
 <p> This second way to define union and intersection is perfectly good and correct. But, in this course we will
@@ -261,7 +268,7 @@ greater than 1" then <m>\sim {\cal P} (x)</m>: "<m>x</m> is an integer less than
 
 <p>
   If <m>\cal P</m> and <m>\cal Q</m> are statements, we can construct another statement, 
-  called an <em>implication</em> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
+  called an <term>implication</term> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
   <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. In all other cases it is true. 
   We read this  as "<m>\cal P</m> implies <m>\cal Q</m>", or "If <m>\cal P</m>, then <m>\cal Q</m>."
   The logic is that we
@@ -282,7 +289,7 @@ greater than 1" then <m>\sim {\cal P} (x)</m>: "<m>x</m> is an integer less than
   </p>
   <p>
   <m>{\cal P} \Longleftrightarrow {\cal Q}</m> means that <m>{\cal P} \Rightarrow {\cal Q}</m> and <m>{\cal Q}\Rightarrow {\cal P}</m>. 
-  In this case we say that <m>\cal P</m> and <m>\cal Q</m> are <em>equivalent</em>.  Here is an example from 
+  In this case we say that <m>\cal P</m> and <m>\cal Q</m> are <term>equivalent</term>.  Here is an example from 
   elementary Algebra. Suppose that <m>x</m> is a rational number. Then
   <me> 3x=4 \Longleftrightarrow x=\frac{4}{3}.</me> 
   In fact, all the steps involved in solving Algebra or Calculus problems are mostly sequences of equivalent 
@@ -308,7 +315,7 @@ this textbook on Discrete Mathematics</url>.
 <definition xml:id="def-subset">
   <statement>
     <p>
-      If <m>A</m> and <m>B</m> are sets, we say that <m>A</m> is a <em>subset</em> of <m>B</m> if every element
+      If <m>A</m> and <m>B</m> are sets, we say that <m>A</m> is a <term>subset</term> of <m>B</m> if every element
       of <m>A</m> is also an element of <m>B</m>, and in this case we write <m>A\subset B</m>. 
     </p>
   </statement>
@@ -324,10 +331,30 @@ So we can write
 <definition>
 </definition>
 </p>
-  </subsection>
-
-
   </section>
+
+
+  <section>
+    <title>Basic facts about the integers </title>
+    <p>
+      The integers are the building blocks of mathematics and we will list here a few facts that
+      will soon be needed. </p>
+      
+      <p>An integer <m>n</m> is <term>even</term> if it is twice another integer.  
+      Another way to say this is that <m>m</m> is <term>divisible</term> by 2. So 
+      <m>n</m> is even if <m>n=2m</m> where <m>m</m> is anther integer. For example, 
+      10 is even because it is twice 5.
+    </p>
+    <p> An integer is <term>odd</term> if it is one more than twice another integer, which is the same 
+      as saying that it is not divisible by 2. So <m>n</m>  is odd if <m>n=2m+1</m> for some other integer <m>m</m>. 
+      For example, 9 is odd because it is one more than twice 4. We could also say an odd integer is 1 less than twice
+      another integer, or <m>n=2m-1</m>. So 9 is 1 less than twice 5.  
+    </p>
+     <p> So the <term>positive even integers</term> (or <term>positive even natural numbers</term>) 
+      are the elements of the set
+      <me>\{2,4,6,\ldots\} = \{x\in {\mathbb N}| x=2m \mbox{ for some } m\in {\mathbb N}\}.</me>
+     </p>
+    </section>
 
 
 <section><title> Writing proofs</title>
@@ -335,8 +362,8 @@ So we can write
   The purpose of a proof in mathematics is to convince a reader (or a listener) that a certain statement is true. 
   So, besides being correct, it must be understandable and as easy as possible to follow. 
   Usually we are interested in proving that a statement of the form <m>{\cal P} \Rightarrow {\cal Q}</m> is true,
-  where <m>\cal P</m> is statement containing all the <em>assumptions</em> and <m>\cal Q</m> is a statement 
-  containing the <em>conclusions</em>. We will discuss four different types of proofs, with examples.
+  where <m>\cal P</m> is statement containing all the <term>assumptions</term> and <m>\cal Q</m> is a statement 
+  containing the <term>conclusions</term>. We will discuss four different types of proofs, with examples.
 
   </p>
 
@@ -348,8 +375,20 @@ derive logical consequences from the assumptions contained in <m>\cal P</m> unti
 that <m>\cal Q</m> is true. 
       </p>
       <example>
+<p>Prove that if <m>n</m> is an even integer, then <m>3n</m> is divisible by 6. 
+</p>
+<p>In this problem, the given assumptions consist in the 
+  statement <me>{\cal P}: n \mbox{ is an even integer}</me>
+  the conclusion is the statement <me>{\cal Q}: 3n \mbox{ is divisible by 6}</me> and we want to prove 
+  <m>{\cal P}\Rightarrow {\cal Q}</m>. 
+</p>
+<p>
+So we start deriving logical conclusions. <m>\cal P</m> is saying that <m>n</m> is even, 
+so we can write <m>n=2m</m> for some integer
+<m>m</m>. Then <m>3n=3(2m)=6m</m>. But this means that <m>3n</m> is divisible by 6. So we conclude that <m>\cal Q</m>
+is true. 
+</p>
 
-    Suppose that <m>n</m> is an even integer. Prove that <m>3n</m> is divisible by 6.
       </example>
     
     </subsection>>
