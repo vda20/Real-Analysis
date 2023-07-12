@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Review of basic concepts</title>
+<title>Logic and set theory</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-title.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-title.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-title.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
@@ -193,57 +193,21 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-title.html" class="internal"><span class="codenumber">1.1</span> <span class="title">How is this course different from Calculus?</span></a></div></li>
-<li class="active">
-<div class="toc-item"><a href="sec-1.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Review of basic concepts</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-1.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">The various types of numbers</span></a></div></li>
-<li><div class="toc-item"><a href="sec-1.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Logic and set theory</span></a></div></li>
-<li><div class="toc-item"><a href="sec-1.html#subsection-3" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Basic facts about the integers</span></a></div></li>
-</ul>
-</li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The various types of numbers</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logic and set theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Basic facts about the integers</span></a></div></li>
 <li>
-<div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Writing proofs</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-3.html#subsection-4" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Direct proofs</span></a></div></li></ul>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Writing proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#subsection-1" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Direct proofs</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="sec-1"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Review of basic concepts</span>
+<section class="section" id="section-3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Logic and set theory</span>
 </h2>
-<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">The various types of numbers</span>
-</h3>
-<div class="para logical" id="p-6">
-<div class="para">We assume knowledge of the <dfn class="terminology">natural numbers</dfn>:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-{\mathbb N}=\{1,2,3,\ldots\},
-\end{equation*}
-</div>
-<div class="para">the <dfn class="terminology">integers</dfn>:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-{\mathbb Z}=\{0, \pm 1, \pm 2, \ldots\},
-\end{equation*}
-</div>
-<div class="para">the <dfn class="terminology">rational numbers</dfn>:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-{\mathbb Q}=\left\{\frac{p}{q}: p\in {\mathbb Z}, q\in {\mathbb N}\right\}.
-\end{equation*}
-</div>
-</div>
-<div class="para" id="p-7">The natural numbers (sometimes also called <dfn class="terminology">positive integers</dfn>) can be added and multiplied. The number 1 is rather special for two reasons: it’s the smallest of all, and it has the nice property that <span class="process-math">\(x\cdot 1=x=1\cdot x\)</span> for all natural numbers <span class="process-math">\(x\text{.}\)</span> The natural numbers cannot always be subtracted, for example <span class="process-math">\(3\)</span> and <span class="process-math">\(5\)</span> are natural numbers, but <span class="process-math">\(3-5\)</span> is not.</div>
-<div class="para" id="p-8">The integers can be added, multiplied and subtracted. Beside 1, they have another special element, <span class="process-math">\(0\text{,}\)</span> that has the property that <span class="process-math">\(x+0=x=0+x\)</span> for all integers <span class="process-math">\(x\text{.}\)</span> They cannot always be divided. For example, <span class="process-math">\(2\)</span> and <span class="process-math">\(3\)</span> are integers, but <span class="process-math">\(2/3\)</span> is not.</div>
-<div class="para" id="p-9">The rational numbers can be added, multiplied, subtracted, and divided (with the only exception that we cannot divide by <span class="process-math">\(0\)</span>).   So we can do all the usual operations of arithemtic and algebra with the rational numbers. We say that they form a <dfn class="terminology">field</dfn>, a concept that we will describe more precisely in the next chapter.</div>
-<div class="para" id="p-10">So we can do all four operations with the rational numbers. But there is still something missing, and it is not something abstract, but actually quite practical. Suppose we want to build a fence for a field (as in a corn or strawberry field, not the math concept of field of the previous paragraph!) so that it will be  a square of area <span class="process-math">\(A\)</span> square feet. Because the area of a square of side <span class="process-math">\(x\)</span> is <span class="process-math">\(A=x^2\text{,}\)</span> this means that we need to solve the equation <span class="process-math">\(x^2=A\text{,}\)</span> and the answer is <span class="process-math">\(x=\sqrt{A}\text{.}\)</span>
-</div>
-<div class="para" id="p-11">So being able to find the square root of a positive number is of practical use. But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational number whose square is <span class="process-math">\(2\text{.}\)</span> In other words, <span class="process-math">\(\sqrt{2}\)</span> cannot be a rational number (we will soon see a proof of this fact). This means that we need to go beyond the rational numbers, and consider a larger set of numbers, called the Real numbers. These are the numbers that give the name "Real Analysis" to this course.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Logic and set theory</span>
-</h3>
 <div class="para" id="p-12">Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations. Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often neglected. This course will be based on <dfn class="terminology">definitions</dfn>, that precisely introduce and describe a new concept, <dfn class="terminology">statements</dfn> (also called theorems, or lemmas, or propositions)  based on these definitions, and <dfn class="terminology">proofs</dfn> of the statements. We will now discuss a little each of these notions.</div>
 <div class="para" id="p-13">As mentioned in the previous section,  we need to be precise when making definitions, and we should only use concepts that have already been previously defined. But we need to start somewhere. There are notions that must be treated as understood, without appealing to any other previously defined concepts. Basic examples of these notions are those of <dfn class="terminology">set</dfn><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> and <dfn class="terminology">membership</dfn>. A set is a collection of elements. An element is a member of a set (or it belongs to it, or is contained in it) if it is one of the elements that make up the set. These notions are primitive, in the sense that they cannot be explained or defined in terms of other notions. We need to start from here. We will use curly braces <span class="process-math">\(\{ \ldots \}\)</span> to represent what a set contains, as we have already done in the notation for <span class="process-math">\(\mathbb N\text{,}\)</span> <span class="process-math">\(\mathbb Z\)</span> and <span class="process-math">\(\mathbb Q\)</span> in the previous section.</div>
 <div class="para" id="p-14">In this course, the natural number, integers and rational numbers will also be considered as already defined <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 3 </sup></a>. So <span class="process-math">\(\mathbb N\text{,}\)</span> <span class="process-math">\(\mathbb Z\)</span> and <span class="process-math">\(\mathbb Q\)</span>  are basic examples of sets. If <span class="process-math">\(A\)</span> is a set, we will use the notation <span class="process-math">\(x\in A\)</span> to mean that <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(A\text{,}\)</span> or that <span class="process-math">\(x\)</span> belongs to <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(x\not \in A\)</span> to mean that <span class="process-math">\(x\)</span> is not an element of <span class="process-math">\(A\text{.}\)</span> So for example <span class="process-math">\(3\in {\mathbb N}\)</span> and <span class="process-math">\(\frac{1}{2}\not \in {\mathbb Z}\text{.}\)</span>
@@ -272,9 +236,9 @@ window.MathJax = {
 </div>
 </div>
 <div class="para" id="p-17">Once we feel comfortable with the notion of a set and what it means for something to belong to it, we can define the basic set operations such as <dfn class="terminology">union</dfn> and <dfn class="terminology">intersection</dfn>. This gives us the opportunity to illustrate our first definition.</div>
-<article class="definition definition-like" id="def-"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
-</h4>
+<article class="definition definition-like" id="def-"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h3>
 <div class="para" id="p-18">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be sets. The  <dfn class="terminology">union</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set consisting of all elements that are either in <span class="process-math">\(A\)</span> or in <span class="process-math">\(B\text{,}\)</span> and it is denoted by <span class="process-math">\(A\cup B\text{.}\)</span>   The <dfn class="terminology">intersection</dfn> of  <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is the set consisting of all elements that are both in <span class="process-math">\(A\)</span> and in <span class="process-math">\(B\text{,}\)</span> and it is denoted by <span class="process-math">\(A\cap B\text{.}\)</span>
 </div></article><div class="para" id="p-19">Note that the word "or" in math is used in a different way than it is used in ordinary language. In math, <span class="process-math">\(\cal P\)</span> or <span class="process-math">\(\cal Q\)</span> means either <span class="process-math">\(\cal P\text{,}\)</span> or <span class="process-math">\(\cal Q\text{,}\)</span> or both. So if <span class="process-math">\(x\)</span> is in <span class="process-math">\(A\cup B\text{,}\)</span> then <span class="process-math">\(x\)</span> could be in <span class="process-math">\(A\text{,}\)</span> or in <span class="process-math">\(B\text{,}\)</span> or in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Compare with the ordinay use of "or" in the sentence "Would you like tea or coffee?". In this sentence it is evident that the choice is understood to be between one or the other, not both.</div>
 <div class="para" id="p-20">Let’s pause a moment to examine what the above definition of union and intersection does. First of all, it uses plain English. Then, it does two different things: it explains what the new concepts are, <em class="alert">and</em> it assigns a name to them. The assigned names are <dfn class="terminology">union</dfn> and <dfn class="terminology">intersection</dfn>. Then, it also introduces some <em class="alert">notation</em> in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols <span class="process-math">\(\cup\)</span> and <span class="process-math">\(\cap\)</span> that represent union and intersection, respectively. In summary, a definition often does three things: it explains the meaning of a new concept; it reserves a word or phrase to be used for it; and (sometimes) it also reserves a symbol to be used for it.</div>
@@ -327,9 +291,9 @@ A\cap B =\{x|x\in A \mbox{ and } x\in B\}.
 <div class="para">To understand this using the same example as before, saying "If the Saints win the game, Dustin takes Jasmine to dinner" is the same as saying "If Dustin doesn’t take Jasmine to dinner, the Saints have lost the game".</div>
 </div>
 <div class="para logical" id="p-30">
-<div class="para">We will now give a few more especially important definitions. A complete treatment of set theory can be found in many freely avaialble online sources such as <a class="external" href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html" target="_blank">this textbook on Discrete Mathematics</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 6 </sup></a>. <article class="definition definition-like" id="def-subset"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4>
+<div class="para">We will now give a few more especially important definitions. A complete treatment of set theory can be found in many freely avaialble online sources such as <a class="external" href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html" target="_blank">this textbook on Discrete Mathematics</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 6 </sup></a>. <article class="definition definition-like" id="def-subset"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h3>
 <div class="para" id="p-31">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are sets, we say that <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\)</span> if every element of <span class="process-math">\(A\)</span> is also an element of <span class="process-math">\(B\text{,}\)</span> and in this case we write <span class="process-math">\(A\subset B\text{.}\)</span>
 </div></article> Note again how this definition provides three pieces of information: the explanation of a new concept, its name in English (subset) and the symbol used <span class="process-math">\(\subset\text{.}\)</span> We can make the same definition using only symbols:</div>
 <div class="displaymath process-math">
@@ -344,22 +308,9 @@ A\cap B =\{x|x\in A \mbox{ and } x\in B\}.
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-32"><article class="definition definition-like" id="definition-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h4></article></div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Basic facts about the integers</span>
-</h3>
-<div class="para" id="p-33">The integers are the building blocks of mathematics and we will list here a few facts that will soon be needed.</div>
-<div class="para" id="p-34">An integer <span class="process-math">\(n\)</span> is <dfn class="terminology">even</dfn> if it is twice another integer. Another way to say this is that <span class="process-math">\(m\)</span> is <dfn class="terminology">divisible</dfn> by 2. So <span class="process-math">\(n\)</span> is even if <span class="process-math">\(n=2m\)</span> where <span class="process-math">\(m\)</span> is anther integer. For example, 10 is even because it is twice 5.</div>
-<div class="para" id="p-35">An integer is <dfn class="terminology">odd</dfn> if it is one more than twice another integer, which is the same as saying that it is not divisible by 2. So <span class="process-math">\(n\)</span>  is odd if <span class="process-math">\(n=2m+1\)</span> for some other integer <span class="process-math">\(m\text{.}\)</span> For example, 9 is odd because it is one more than twice 4. We could also say an odd integer is 1 less than twice another integer, or <span class="process-math">\(n=2m-1\text{.}\)</span> So 9 is 1 less than twice 5.</div>
-<div class="para logical" id="p-36">
-<div class="para">So the <dfn class="terminology">positive even integers</dfn> (or <dfn class="terminology">positive even natural numbers</dfn>) are the elements of the set</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\{2,4,6,\ldots\} = \{x\in {\mathbb N}: x=2m \mbox{ for some } m\in {\mathbb N}\}.
-\end{equation*}
-</div>
-</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Actually, in a more advanced treatment, the primitive, undefined notion is called a <dfn class="terminology">class</dfn> and a set is defined to be a class with some desirable properties. See  <a class="external" href="https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set" target="_blank">this discussion</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a> if you are interestd in the difference between classes and sets. But we will consider a set a primitive notion.</div></div>
+<div class="para" id="p-32"><article class="definition definition-like" id="definition-3"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h3></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Actually, in a more advanced treatment, the primitive, undefined notion is called a <dfn class="terminology">class</dfn> and a set is defined to be a class with some desirable properties. See  <a class="external" href="https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set" target="_blank">this discussion</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a> if you are interestd in the difference between classes and sets. But we will consider a set a primitive notion.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore"> https://math.stackexchange.com/questions/139330/what-is-the-difference-between-a-class-and-a-set</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Again, this is not the case in more advanced treatments, where the natural numbers are defined purely in terms of sets (see  <a class="external" href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf" target="_blank">this lecture</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 4 </sup></a> for example), then the integers and rational numbers as <a class="external" href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf" target="_blank">derived concepts</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 5 </sup></a>
 </div></div>
@@ -368,7 +319,7 @@ A\cap B =\{x|x\in A \mbox{ and } x\in B\}.
 <div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">discrete.openmathbooks.org/dmoi3/sec_intro-sets.html</code></div></div>
 </div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-title.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
