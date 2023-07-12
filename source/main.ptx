@@ -342,7 +342,7 @@ So we can write
       
       <p>An integer <m>n</m> is <term>even</term> if it is twice another integer.  
       Another way to say this is that <m>m</m> is <term>divisible</term> by 2. So 
-      <m>n</m> is even if <m>n=2m</m> where <m>m</m> is anther integer. For example, 
+      <m>n</m> is even if <m>n=2m</m> where <m>m</m> is another integer. For example, 
       10 is even because it is twice 5.
     </p>
     <p> An integer is <term>odd</term> if it is one more than twice another integer, which is the same 
