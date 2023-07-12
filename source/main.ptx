@@ -133,7 +133,8 @@
   (as in a corn or strawberry field, not 
   the math concept of field of the previous paragraph!) so that it will be  a square of area <m>A</m> square feet. 
   Because the area of a square
-  of side <m>x</m> is <m>A=x^2</m>, this means that we need to solve the equation <m>x^2=A</m>, and the answer 
+  of side <m>x</m> is <m>A=x^2</m>, this means that if we want to know how long the side of the 
+  square is,  we need to solve the equation <m>x^2=A</m>, and the answer 
   is <m>x=\sqrt{A}</m>. </p>
   <p> So being able to find the square root of a positive number is of practical use.
   But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational 
@@ -244,11 +245,12 @@ one or the other, not both.</p>
 <p>We stress the fact that plain English was used. This could have been done in a different way.
  We could have written the definition as follows:</p>
  <p>
- <alert> Definition</alert> The  <term>union</term> of <m>A</m> and <m>B</m> is the set <m>A\cup B</m> defined by
+ <definition>  The  <term>union</term> of <m>A</m> and <m>B</m> is the set <m>A\cup B</m> defined by
  <me>A\cup B =\{x|x\in A \mbox{ or } x\in B\},</me>
  and the 
  <term>intersection</term> of  <m>A</m> and <m>B</m> is the set <m>A\cap B</m> defined by
  <me>A\cap B =\{x|x\in A \mbox{ and } x\in B\}.</me>
+ </definition>
 </p>
 <p> This second way to define union and intersection is perfectly good and correct. But, in this course we will
 prefer to use plain English language whenever possible, in definitions, in statements of theorems, and in proofs.
@@ -362,7 +364,7 @@ So we can write
   The purpose of a proof in mathematics is to convince a reader (or a listener) that a certain statement is true. 
   So, besides being correct, it must be understandable and as easy as possible to follow. 
   Usually we are interested in proving that a statement of the form <m>{\cal P} \Rightarrow {\cal Q}</m> is true,
-  where <m>\cal P</m> is statement containing all the <term>assumptions</term> and <m>\cal Q</m> is a statement 
+  where <m>\cal P</m> is a statement containing all the <term>assumptions</term> and <m>\cal Q</m> is a statement 
   containing the <term>conclusions</term>. We will discuss four different types of proofs, with examples.
 
   </p>
