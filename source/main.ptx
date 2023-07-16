@@ -104,15 +104,19 @@
 
 
   <section><title> The various types of numbers </title>
+    <subsection><title><m>\mathbb N, \mathbb Z</m> and <m>\mathbb Q</m></title>
   <p>We assume knowledge of the <term>natural numbers</term>:
   <me> {\mathbb N}=\{1,2,3,\ldots\},</me>
   the <term>integers</term>:
   <me>{\mathbb Z}=\{0, \pm 1, \pm 2, \ldots\},</me>
-  the <term>rational numbers</term>:
-  <me>{\mathbb Q}=\left\{\frac{p}{q}: p\in {\mathbb Z}, q\in {\mathbb N}\right\}.</me>
+  and the <term>rational numbers</term> <m>\mathbb Q</m>, consisiting of all fractions that have an integer in the 
+  numerator, and a natural number in the denominator, such as <m>2/3</m> or <m>-1/7</m>. 
+  Note that in the definition of rational numbers, the denominator  could be 1,
+  and since <m>p/1=p</m>, all the integers are automatically also rational numbers.  So every natural number is
+  an integer, and every integer is a rational number.
   </p>
   <p> The natural numbers (sometimes also called <term>positive integers</term>) can be added and multiplied. The 
-  number 1 is rather special for two reasons: it's the smallest of all, and it has the nice property that 
+  number 1 is rather special because it has the property that 
   <m>x\cdot 1=x=1\cdot x</m> for all natural numbers <m>x</m>. 
   The natural numbers cannot always be subtracted, for example <m>3</m> and <m>5</m> are natural numbers, 
   but <m>3-5</m> is not.
@@ -123,15 +127,31 @@
   <m>2</m> and <m>3</m> are integers, but <m>2/3</m> is not. </p>
   <p> The rational numbers can be added, multiplied, subtracted,
   and divided (with the only exception that we cannot divide by <m>0</m>).   So we can do all the usual operations
-  of arithemtic and algebra with the rational numbers. We say that they form a <term>field</term>, a concept that we 
-  will describe more precisely in the next chapter. 
+  of arithmetic and algebra with the rational numbers. We say that they form a <term>field</term>, a concept that we 
+  will describe more precisely in the next chapter. In this course, the natural number, integers and rational numbers will be considered 
+ as already defined. <fn>This is not the case in more advanced treatments, where the natural numbers are defined
+purely in terms of sets 
+(see  <url href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf">
+this lecture</url> for example), then the integers and rational numbers as 
+<url href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf">
+derived concepts</url>. </fn> 
 </p>
+    </subsection>
+    <subsection><title>Order</title>
+<p> 
+Another important concept that applies to all three types of numbers is that of <term>order</term>. Given
+any two numbers <m>x</m> and <m>y</m> (whether they are natural, integers, or rational), unless the two numbers are
+the same, one must be smaller than then other. In symbols, if <m>x\neq y</m>, then either <m>x\lt y</m> or <m>y\lt x</m>.
+So we say that the rational numbers form an <term>ordered field</term>, and this will be the main object of study of the
+next chapter.
+</p> 
+
 
 <p>
-  So we can do all four operations with the rational numbers. But there is still something missing, and it is not
-  something abstract, but actually quite practical. Suppose we want to build a fence for a field 
+  We already said that we can do all four operations with the rational numbers. 
+  But there is still something missing. Suppose we want to build a fence for a field 
   (as in a corn or strawberry field, not 
-  the math concept of field of the previous paragraph!) so that it will be  a square of area <m>A</m> square feet. 
+  the math concept of field mentioned earlier!) so that it will be  a square of area <m>A</m> square feet. 
   Because the area of a square
   of side <m>x</m> is <m>A=x^2</m>, this means that if we want to know how long the side of the 
   square is,  we need to solve the equation <m>x^2=A</m>, and the answer 
@@ -140,8 +160,10 @@
   But already the ancient Greeks, in the 5th century BC, discovered that, for example, there can be no rational 
   number whose square is <m>2</m>. In other words, <m>\sqrt{2}</m> cannot be a rational number (we will 
   soon see a proof of this fact). This means that we need to go beyond the rational numbers, and consider a larger 
-  set of numbers, called the Real numbers. These are the numbers that give the name "Real Analysis" to this course.
+  set of numbers, called the Real numbers. These are the numbers that give the name <q>Real Analysis</q> 
+  to this course.
 </p>
+</subsection>
 </section>
 
 
@@ -149,12 +171,149 @@
 <section> <title>Logic and set theory</title>
 <p>Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve
 problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations.
-Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often
+Discussions of the meaning of the concepts involved and the reason why the rules and techniques work are often
 neglected. This course will be based on <term>definitions</term>, that precisely introduce and describe a new concept,
 <term>statements</term> (also called theorems, or lemmas, or propositions)  based on these definitions, and <term>proofs</term> 
 of the statements. We will now discuss a little each of these notions. </p>
+<subsection><title>Statements</title>
+  <p>
+    A <term>statement</term> is 
+any sentence that must be either true or false. So <q>5 is a natural number</q> is a true statement and 
+<q>New York is the
+capital of the United States</q> is a false statement. But <q>Who are you?</q> is not a statement because it makes
+no sense to ask if it is true or false, and  <q>onions taste good</q> is not a statement because whether it is true 
+or false depends on who we ask. We will often use symbols with special font, such as <m>\cal P</m> or
+<m>\cal Q</m>, followed by a colon, to denote statements. So we could write <q> <m>\cal P</m>: 5 is a natural number</q>
+ or
+<q><m>\cal Q</m>: New York is the capital of the United States</q>. If we write <m>{\cal P}(x)</m>, it means
+that the statement <m>\cal P</m> depends on whatever <m>x</m> may be. So for example 
+<q><m>{\cal P}(x)</m>: <m>x</m> is a natural number less than 5</q> is a statement that is true if <m>x</m> is
+1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <term>variable</term>. Of course a 
+variable need not represent a number. We could consider the statement <q><m>{\cal P}(x)</m>: <m>x</m> is a student
+in this class</q>, and then <m>x</m> represents a person. 
+  </p>
+</subsection>
 
-<p> As mentioned in the previous section,  we need to be precise when making definitions, and we should only use 
+<subsection><title>Logic</title>
+<p> We will now review some logic.  If <m>\cal P</m> is a statement, we
+  denote by <m>\sim \cal P</m> its negation. So <m>\sim \cal P</m> is true when <m>\cal P</m> is false, and
+  <m>\sim \cal P</m> is false when <m>\cal P</m> is true. For example, if 
+  <console> <m>{\cal P} (x)</m>: <m>x</m> is an integer 
+  greater than 1</console> then <q><m>\sim {\cal P} (x)</m>: <m>x</m> is an integer less than or equal to 1</q>.  
+  </p>
+  
+  <p>
+    If <m>\cal P</m> and <m>\cal Q</m> are statements, we can construct another statement, 
+    called an <term>implication</term> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
+    <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. In all other cases it is true. 
+    We read this  as "<m>\cal P</m> implies <m>\cal Q</m>", or "If <m>\cal P</m>, then <m>\cal Q</m>."
+    The logic is that we
+    are thinking that if <m>\cal P</m> is true, then  <m>\cal Q</m> must also be true, or
+    that  <m>\cal Q</m> follows from <m>\cal P</m>.
+    </p>
+    <p>
+    To understand why we say that the statement <m>{\cal P} \Rightarrow {\cal Q}</m> is always true except in the
+    case that <m>\cal P</m> is true and <m>\cal Q</m> is false, think of it as a promise. So suppose 
+    <m>\cal P</m> is the statement <q>the New Orleans Saints win the game</q> and <m>\cal Q</m> is the
+    statement <q>Dustin will take Jasmine out to dinner</q>. Then 
+    <m>{\cal P} \Rightarrow {\cal Q}</m> is the promise that if the Saints win the game, 
+   Dustin will take Jasmine out to dinner. How can this promise be broken? Only if the Saints win, and yet Dustin 
+    does not take Jasmine out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement 
+    <m>{\cal P} \Rightarrow {\cal Q}</m> remains true for sure, whether or not Dustin takes Jasmine out to dinner, 
+    because there is no broken promise.</p>
+
+    <p>
+    This logical property of implications is sometimes referred to by saying that 
+    <q>a false statement implies anything</q>. To show that it can play a role in understanding
+    what a definition really says, we consider an example from Linear Algebra.
+    One of the conditions for a matrix to be in Row Echelon Form is the following:
+    <q>If the matrix has any zero rows, they must all be at the bottom.</q>
+    This is an implication <m>{\cal P}\Rightarrow {\cal Q}</m>,
+     with <q><m>{\cal P}</m>: The matrix has some zero rows</q>
+    and <q><m>{\cal Q}</m>: All zero rows are at the bottom</q>.
+    It is easy to understand  that the matrix
+    <me> \begin{pmatrix} 1 \amp 2 \amp 3 \\ 0 \amp 4 \amp 5 \\ 0 \amp 0 \amp 0 \end{pmatrix} </me>
+satisfies this condition, and the matrix
+<me> \begin{pmatrix} 1 \amp 2 \amp 3 \\ 0 \amp 0 \amp 0  \\ 0 \amp 4 \amp 5 \end{pmatrix} </me>
+does not. But what about the matrix
+<me> \begin{pmatrix} 1 \amp 2 \amp 3 \\ 0 \amp 4 \amp 5 \\ 0 \amp 0 \amp 3 \end{pmatrix} ? </me>
+It is not unusual for students to say that this matrix is not in Row Echelon Form, because there is
+no zero row at the bottom . But in fact the implication <q><m>{\cal P}\Rightarrow {\cal Q}</m></q> is true,
+because <m>{\cal P}</m> is false (there are no zero rows). So the condition is satisfied.
+  </p>
+    <p>
+    <m>{\cal P} \Longleftrightarrow {\cal Q}</m> means that <m>{\cal P} \Rightarrow {\cal Q}</m> and <m>{\cal Q}\Rightarrow {\cal P}</m>. 
+    In this case we say that <m>\cal P</m> and <m>\cal Q</m> are <term>equivalent</term>.  Here is an example from 
+    elementary Algebra. Suppose that <m>x</m> is a rational number. Then
+    <me> 3x=4 \Longleftrightarrow x=\frac{4}{3}.</me> 
+    In fact, all the steps involved in solving Algebra or Calculus problems are mostly sequences of equivalent 
+    statements of this type.  
+  </p>
+  <p>
+  The negation of <m>{\cal P} \Rightarrow {\cal Q}</m> is often useful when writing proofs. It must be a statement
+  that is true precisely when <m>{\cal P} \Rightarrow {\cal Q}</m> is false, and we know that this happens 
+  only when <m>{\cal P}</m> is true and  <m>{\cal Q}</m> is false. So we see that
+  <me> \sim({\cal P} \Rightarrow {\cal Q}) \Longleftrightarrow ({\cal P} \mbox{ and } \sim {\cal Q}).</me>
+  </p>
+  <p>
+  Another useful logical equivalence is :
+  <me>({\cal P} \Rightarrow {\cal Q }) \Longleftrightarrow (\sim {\cal Q} \Rightarrow \sim {\cal P}).</me>
+  The implication <m>\sim {\cal Q} \Rightarrow \sim {\cal P}</m> is called the <term>contrapositive</term>
+  of the implication <m>{\cal P} \Rightarrow {\cal Q }</m>.
+  To understand this using the same example as before, saying 
+  <q>If the Saints win the game, then Dustin takes Jasmine to dinner</q> 
+  is the same as saying <q>If Dustin doesn't take Jasmine to dinner, then the Saints have lost the game</q>. 
+  </p>
+</subsection>
+
+<subsection><title>Quantifiers</title>
+  <p>
+When a statement <m>{\cal P}(x)</m>  depends on some variable, there are two especially 
+important situations that we need to consider:
+<ul>
+  <li> The statement is true for <alert>all</alert> <m>x</m></li>
+  <li>The statement is true for <alert>some</alert> <m>x</m>. </li>
+  </ul>
+  The two symbols (called <term>quantifiers</term>) <m>\forall</m> (read as: <q>for all</q>) and 
+  <m>\exists</m> (read as <q>there exists</q>)
+  are useful to write such statements. So for example, suppose <m>x</m> represents people and 
+  <q><m>{\cal P}(x): x</m> likes chocolate</q>. Then the satement <q> Everybody likes chocolate</q> can be 
+    written as <m>(\forall x){\cal P}(x)</m>, while the statement
+     <q> There are some people who don't like chocolate</q> is <m>(\exists x)\sim {\cal P}(x)</m>.
+
+  </p>
+<p>
+  Note that the statement <q>There are some people who don't like chocolate</q> is the precise
+  negation of the statement <q>Everybody likes chocolate</q>. This is reflected by the fact that <m>\forall </m> 
+  turns to <m>\exists </m> and <m>{\cal P}</m> turns to <m>\sim {\cal P}</m>, and provides a useful rule of thumb
+  to write the negation of complex logical statements: change all <m>\forall </m> to <m>\exists </m> and 
+  all <m>\exists </m> to <m>\forall </m>, and change every statement to its negation. 
+</p>
+<example>
+  <p> Suppose that we work with rational numbers, so all the variables  represent rational numbers. 
+    Consider the statement <q>Every number has a square root.</q>
+    We can write the statement
+     in symbols as
+    <me>(\forall x)(\exists y)(y^2=x).</me>
+    According to our rule, the negation is
+    <me>(\exists x)(\forall y)(y^2\neq x).</me>
+    In fact, the last statement says "There is some rational number <m>x</m> with the property that 
+    whatever rational number <m>y</m> we use, the square of <m>y</m> will not be <m>x</m>".
+    This is the same thing as saying that there is some <m>x</m> that does not have a square root.  </p>
+
+</example>
+
+</subsection>
+
+
+<subsection><title>Sets</title>
+<p> We will review some of the basic notions of set theory.
+  A more complete treatment of the theory can be found
+in many freely avaialble online sources such as 
+ <url href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">
+this textbook on Discrete Mathematics</url>.
+ </p>
+ <p> As we already mentioned,  we need to be precise when making definitions, and we should only use 
 concepts that have already been previously defined. But we need to start somewhere. There are notions that must be 
 treated as understood, without appealing to any other previously 
 defined concepts. Basic examples of these notions are those of <term>set</term><fn> Actually, in a more advanced 
@@ -167,34 +326,15 @@ of the elements that make up the set. These notions are primitive, in the sense 
 defined in terms of other notions. We need
 to start from here. We will use curly braces <m>\{ \ldots \}</m> to represent what a set contains, as we have already
 done in the notation for <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m> in the previous section.</p>
-<p>
-In this course, the natural number, integers and rational numbers will also be considered 
- as already defined <fn>Again, this is not the case in more advanced treatments, where the natural numbers are defined
-purely in terms of sets 
-(see  <url href="http://web.math.ucsb.edu/~padraic/ucsb_2014_15/ccs_proofs_f2014/ccs_proofs_f2014_lecture4.pdf">
-this lecture</url> for example), then the integers and rational numbers as 
-<url href="https://static.aminer.org/pdf/PDF/000/268/350/rational_equivalence_relations.pdf">
-derived concepts</url> </fn>. 
+<p> 
 So <m>\mathbb N</m>, <m>\mathbb Z</m> and <m>\mathbb Q</m>  are basic examples of sets.
 If <m>A</m> is a set, we will use the notation <m>x\in A</m> to mean that <m>x</m> is an 
 element of <m>A</m>, or that <m>x</m> belongs to <m>A</m>, and <m>x\not \in A</m> to mean that <m>x</m> is not
 an element of <m>A</m>. So for example <m>3\in {\mathbb N}</m> and <m>\frac{1}{2}\not \in {\mathbb Z}</m>. 
 </p>
-  <p>
-But how do we make other sets? Here logic, and other primitive notions, come into play. A <term>statement</term> is 
-any sentence that must be either true or false. So "5 is a natural number" is a true statement, "New York is the
-capital of the United States" is a false statement. But "Who are you?" is not a statement because it makes
-no sense to ask if it is true or false, and  "onions taste good" is not a statement because whether it is true 
-or false depends on who we ask. We will often use symbols with special font, such as <m>\cal P</m> or
-<m>\cal Q</m>, followed by a colon, to denote statements. So we could write <m>\cal P</m>: "5 is a natural number" or
-<m>\cal Q</m>: "New York is the capital of the United States". If we write <m>{\cal P}(x)</m>, it means
-that the statement <m>\cal P</m> depends on whatever <m>x</m> may be. So for example 
-<m>{\cal P}(x)</m>: "<m>x</m> is a natural number less than 5" is a statement that is true if <m>x</m> is
-1,2,3 or 4, but it is false otherwise. In this situation we call <m>x</m> a <term>variable</term>. Of course a 
-variable need not represent a number. We could consider the statement <m>{\cal P}(x)</m>: "<m>x</m> is a student
-in this class", and then <m>x</m> represents a person. 
-    </p>
-<p>A common and useful way to describe sets is the <term>set builder notation</term>. Suppose
+<p>
+But how do we make other sets? Here logic, and the primitive notion of membership, come into play.
+A common and useful way to describe sets is the <term>set builder notation</term>. Suppose
 <m>{\cal P}(x)</m> is a statement depending on some variable <m>x</m>. We can then consider the set 
 of all possible <m>x</m> that will make <m>{\cal P}(x)</m> true, and we denote it by 
 <m>\{x| {\cal P}(x)\}</m>. So if 
@@ -207,7 +347,8 @@ information in the statement <m>{\cal P}(x)</m>. So we could write the above exa
 <me>\{x\in {\mathbb N}| x\lt 5\}.</me>
 It is still the same set, <m>\{1,2,3,4\}</m>.
   </p>
-
+</subsection>
+<subsection><title>Set operations</title>
 <p>
   Once we feel comfortable with the notion of a set and what it means for something to belong to it, we can define
   the basic set operations such as <term>union</term> and <term>intersection</term>. This gives us the opportunity to illustrate
@@ -224,10 +365,11 @@ It is still the same set, <m>\{1,2,3,4\}</m>.
       </p>
     </statement>
   </definition>  
-<p>Note that the word "or" in math is used in a different way than it is used in ordinary language. In math, 
+<p>Note that the word <q>or</q> in math is used in a different way than it is used in ordinary language. In math, 
 <m>\cal P</m> or <m>\cal Q</m> means either <m>\cal P</m>, or <m>\cal Q</m>, or both. So if <m>x</m> is in <m>A\cup B</m>, then
-<m>x</m> could be in <m>A</m>, or in <m>B</m>, or in both <m>A</m> and <m>B</m>. Compare with the ordinay use of "or" 
-in the sentence "Would you like tea or coffee?". In this sentence it is evident that the choice is understood to
+<m>x</m> could be in <m>A</m>, or in <m>B</m>, or in both <m>A</m> and <m>B</m>. 
+Compare with the ordinay use of "or" 
+in the sentence <q>Would you like tea or coffee?</q>. In this sentence it is evident that the choice is understood to
 be between
 one or the other, not both.</p>
 <p>
@@ -235,7 +377,7 @@ one or the other, not both.</p>
   First of all, it uses plain English. Then, it does two different things: it explains 
   what the new concepts are, <alert>and</alert> it assigns a name to them. The assigned
   names are <term>union</term> and <term>intersection</term>. Then, it also introduces some <alert>notation</alert> 
-  in order to efficiently use the new concepts in writing. The notation introduced consists in the two symbols
+  in order to efficiently use the new concepts in writing. The notation introduced consists of the two symbols
   <m>\cup</m> and <m>\cap</m> that represent union and intersection, respectively. In summary, a definition
   often does three things: it explains the meaning of a new concept; it reserves a word or phrase 
   to be used for it; and (sometimes) it also reserves a symbol to be used for it.
@@ -262,58 +404,9 @@ an exercise, to express in words concepts presented using only symbols, and like
  to write in compact symbolic form statements that were made using only words.
 </p>
 
-<p> Before we proceed with more definitions, we need to review some logic. If <m>\cal P</m> is a statement, we
-denote by <m>\sim \cal P</m> its negation. So <m>\sim \cal P</m> is true when <m>\cal P</m> is false, and
-<m>\sim \cal P</m> is false when <m>\cal P</m> is true. For example, if <m>{\cal P} (x)</m>: "<m>x</m> is an integer 
-greater than 1" then <m>\sim {\cal P} (x)</m>: "<m>x</m> is an integer less than or equal to 1".  
-</p>
 
 <p>
-  If <m>\cal P</m> and <m>\cal Q</m> are statements, we can construct another statement, 
-  called an <term>implication</term> denoted by <m>{\cal P} \Rightarrow {\cal Q}</m> that is false
-  <alert>only when</alert> <m>\cal P</m> is true and <m>\cal Q</m> is false. In all other cases it is true. 
-  We read this  as "<m>\cal P</m> implies <m>\cal Q</m>", or "If <m>\cal P</m>, then <m>\cal Q</m>."
-  The logic is that we
-  are thinking that if <m>\cal P</m> is true, then  <m>\cal Q</m> must also be true, or
-  that  <m>\cal Q</m> follows from <m>\cal P</m>.
-  </p>
-  <p>
-  To understand why we say that the statement <m>{\cal P} \Rightarrow {\cal Q}</m> is always true except in the
-  case that <m>\cal P</m> is true and <m>\cal Q</m> is false, think of it as a promise. So suppose 
-  <m>\cal P</m> is the statement "the New Orleans Saints win the game" and <m>\cal Q</m> is the
-  statement "Dustin will take Jasmine out to dinner". Then 
-  <m>{\cal P} \Rightarrow {\cal Q}</m> is the promise that if the Saints win the game, 
- Dustin will take Jasmine out to dinner. How can this promise be broken? Only if the Saints win, and yet Dustin 
-  does not take Jasmine out to dinner. In all other cases, the promise will not be broken. So if the Saints lose, the statement 
-  <m>{\cal P} \Rightarrow {\cal Q}</m> remains true for sure, whether or not Dustin takes Jasmine out to dinner, 
-  because there is no broken promise.
-  This logical property of implications is sometimes referred to by saying that "a false statement implies anything".
-  </p>
-  <p>
-  <m>{\cal P} \Longleftrightarrow {\cal Q}</m> means that <m>{\cal P} \Rightarrow {\cal Q}</m> and <m>{\cal Q}\Rightarrow {\cal P}</m>. 
-  In this case we say that <m>\cal P</m> and <m>\cal Q</m> are <term>equivalent</term>.  Here is an example from 
-  elementary Algebra. Suppose that <m>x</m> is a rational number. Then
-  <me> 3x=4 \Longleftrightarrow x=\frac{4}{3}.</me> 
-  In fact, all the steps involved in solving Algebra or Calculus problems are mostly sequences of equivalent 
-  statements of this type.  
-</p>
-<p>
-The negation of <m>{\cal P} \Rightarrow {\cal Q}</m> is often useful when writing proofs. It must be a statement
-that is true precisely when <m>{\cal P} \Rightarrow {\cal Q}</m> is false, and we know that this happens 
-only when <m>{\cal P}</m> is true and  <m>{\cal Q}</m> is false. So we see that
-<me> \sim({\cal P} \Rightarrow {\cal Q}) \Longleftrightarrow ({\cal P} \mbox{ and } \sim {\cal Q}).</me>
-</p>
-<p>
-Another useful logical equivalence is :
-<me>({\cal P} \Rightarrow {\cal Q }) \Longleftrightarrow (\sim {\cal Q} \Rightarrow \sim {\cal P}).</me>
-To understand this using the same example as before, saying "If the Saints win the game, Dustin takes Jasmine to dinner" 
-is the same as saying "If Dustin doesn't take Jasmine to dinner, the Saints have lost the game".
-</p>
-
-<p>
-We will now give a few more especially important definitions. A complete treatment of set theory can be found
-in many freely avaialble online sources such as <url href="https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">
-this textbook on Discrete Mathematics</url>.
+We will now give a few more especially important definitions. 
 <definition xml:id="def-subset">
   <statement>
     <p>
@@ -325,14 +418,21 @@ this textbook on Discrete Mathematics</url>.
 Note again how this definition provides three pieces of information: the explanation of a new concept, 
 its name in English (subset) and the symbol used <m>\subset</m>. We can make the same definition using only symbols:
 <me>(A\subset B) \Longleftrightarrow (x\in A \Rightarrow x\in B).</me> 
-So we can write 
+Using the <m>\subset</m> symbol, we can write the statement that  every natural number
+ is an integer, and every integer is a rational number (made at the beginning of section 1.2) as:  
 <me>{\mathbb N}\subset {\mathbb Z} \subset {\mathbb Q}.</me>
   </p>
-
+</subsection>
 <p>
 <definition>
+  If <m>A</m> and <m>B</m> are sets, the <term>set difference</term> <m>A\setminus B</m> is defined to be the set of
+  all elements in <m>A</m> that are not in <m>B</m>. In symbols,
+  <me>A\setminus B = \{x\in A| x\not \in B\}.</me>
 </definition>
 </p>
+<p> For example, <m>\mathbb Z \setminus \mathbb N</m> is the set of all negative integers, together with 0, and 
+  <m>\mathbb Q \setminus \mathbb Z</m> is the set of rational numbers that, when written in lowest terms, have
+   a denominator larger than 1.</p>
   </section>
 
 
@@ -341,7 +441,7 @@ So we can write
     <p>
       The integers are the building blocks of mathematics and we will list here a few facts that
       will soon be needed. </p>
-      
+      <subsection><title>Even and Odd integers</title>
       <p>An integer <m>n</m> is <term>even</term> if it is twice another integer.  
       Another way to say this is that <m>m</m> is <term>divisible</term> by 2. So 
       <m>n</m> is even if <m>n=2m</m> where <m>m</m> is another integer. For example, 
@@ -350,12 +450,80 @@ So we can write
     <p> An integer is <term>odd</term> if it is one more than twice another integer, which is the same 
       as saying that it is not divisible by 2. So <m>n</m>  is odd if <m>n=2m+1</m> for some other integer <m>m</m>. 
       For example, 9 is odd because it is one more than twice 4. We could also say an odd integer is 1 less than twice
-      another integer, or <m>n=2m-1</m>. So 9 is 1 less than twice 5.  
+      another integer, or <m>n=2m-1</m>. So 9 is 1 less than twice 5. Every integer is either even or odd. So the 
+      negation of <q><m>n</m> is even</q> is <q><m>n</m> is odd</q>.  
     </p>
      <p> So the <term>positive even integers</term> (or <term>positive even natural numbers</term>) 
       are the elements of the set
-      <me>\{2,4,6,\ldots\} = \{x\in {\mathbb N}| x=2m \mbox{ for some } m\in {\mathbb N}\}.</me>
+      <me>\{2,4,6,\ldots\} = \{x\in {\mathbb N}| x=2m \mbox{ for some } m\in {\mathbb N}\}</me>
+      and the <term>positive odd integers</term> are the elements of the set
+      <me>\{1,3,5,\ldots\} = \{x\in {\mathbb N}| x=2m+1 \mbox{ for some } m\in {\mathbb N}\}.</me>
      </p>
+    </subsection>
+<subsection><title>Divisibility</title>
+     <p> If <m>n</m> and <m>m</m> are integers, and <m>m\neq 0</m>, we say that
+       <m>n</m> is <term>divisible</term> by <m>m</m> if <m>n=km</m> for some integer <m>k</m>. In this
+       case we say that <m>k</m> is the <term>quotient</term> of the division. We also say that <m>k</m> and 
+       <m>m</m> are <term>factors</term>, or <term>divisors</term> of <m>n</m>.  
+       Another way of saying that <m>n</m> is divisible by <m>m</m> is that <m>n/m</m> is an integer.
+       Note that according to this definition, 0 is divisble by any <m>m\neq 0</m> (using <m>k=0</m> as the 
+       quotient).
+     </p>
+<p>
+  Given two integers <m>n</m> and <m>m</m>, the <term>greatest common divisor</term> (often abbrievated 
+  by <m>\gcd(m,n)</m> ) of 
+  <m>n</m> and <m>m</m> is the largest integer that is a divisor of both. So if <m>d=\gcd(m,n)</m>
+  then <m>d</m> divides both <m>n</m> and <m>m</m>, and there is no integer larger than <m>d</m> that
+  does the same.
+</p>
+<example>
+  <p>
+    <m>\gcd(6,15)=3</m>, <m>\gcd(3,18)=3</m>, <m>\gcd(4,9)=1</m>.
+  </p>
+</example>
+<p>
+A rational number can be written in many different ways, because we can always multiply or divide both 
+numerator and denominator by the same number. So for example
+<me>\frac{4}{6}=\frac{2}{3}=\frac{10}{15}.</me> 
+But given any rational number <m>\frac{p}{q}</m>, we can divide both <m>p</m> and <m>q</m> by their gcd and 
+obtain a fraction in <term>lowest terms</term>, meaning that it cannot be written using lower values of
+numerator or denominator. So <m>\frac{2}{3}</m> is the lowest terms form for 
+<m>\frac{4}{6}</m> and <m>\frac{10}{15}</m>.<abbr></abbr> 
+</p>
+</subsection>
+<subsection><title>The Well-Ordering Principle</title>
+  <p>
+  We now notice one property of the natural numbers that the integers and the rationals do not have: <m>\mathbb N</m> has a 
+  <term>least element</term>, the number 1, because <m>1\lt n</m> for all <m>n\in {\mathbb N}, n\neq 1</m>. In fact
+  this property is shared with any subset of <m>\mathbb N</m>. It is an <term>axiom</term>, that is, a statement that is
+  taken to be true without proof. </p>
+  <p>
+  <axiom> <title>The Well-Ordering Principle</title><p> Suppose <m>S</m> is a non-empty subset of <m>\mathbb N</m>. 
+    Then <m>S</m> has a least element.</p>
+  </axiom>
+  </p>
+  <p>
+    So for example the least element of the even numbers is <m>2</m>. The Well-Ordering Principle
+    (that we abbreviate as WOP) surely makes
+    sense, because our intutition tells us that of course, if we have a set of positive integers, one of them must be 
+    the smallest.  
+    But, as it often happens when we are dealing with sets that contain infinitely many elements, 
+    this property cannot be proved from the other properties of the natural numbers. 
+  </p>
+
+  <p>
+    We stress that the WOP is special of the positive integers. For <m>\mathbb Z</m>, WOP fails in an obvious 
+    way: just consider <m>\mathbb Z</m> itself. What is its smallest element? Of course it does not exist, because 
+    we can take negative integers as large as we want. In the case of the rational numbers <m>\mathbb Q</m>, there is
+    another, more subtle reason why the WOP fails, 
+    quite different from the fact that we can take larger and larger negative numbers. We can consider the set
+     <me>S=\left\{\left. \frac{1}{n} \right| n\in {\mathbb N} \right\}.</me> 
+    Then <m>S</m> is a non-empty subset of <m>\mathbb Q</m>, but it has no least element. 
+    This should be intuitively clear, because we can make <m>n</m> larger and larger and get <m>1/n</m> as
+    small as we want, and there will not be a smallest value. We will prove it in the next chapter.
+
+  </p>
+  </subsection>
     </section>
 
 
@@ -390,10 +558,143 @@ so we can write <m>n=2m</m> for some integer
 <m>m</m>. Then <m>3n=3(2m)=6m</m>. But this means that <m>3n</m> is divisible by 6. So we conclude that <m>\cal Q</m>
 is true. 
 </p>
+</example>
+</subsection>
 
+<subsection xml:id="subsec-Contrapositive">
+  <title>Contrapositive</title>
+  <p>
+Instead of proving <m>{\cal P} \Rightarrow {\cal Q }</m>, it is sometimes easier to prove   its contrapositive
+<m>\sim {\cal Q} \Rightarrow \sim{\cal P }</m>. The two statements are logically equivalent, so proving one 
+we also prove the other.  
+  </p>
+  <example xml:id="n2even">
+    <p>Suppose that <m>n</m> is a positive integer. Prove that if <m>n^2</m> is even, then <m>n</m> is
+      even.  
+    </p>
+    <p>We start assuming <m>n</m> is a positive integer and we let  <me>{\cal P}: n^2 \mbox{ is even },</me>
+      <me>{\cal Q}: n \mbox{ is even }.</me> 
+     <!--  So we want to prove  <m>{\cal P} \Rightarrow {\cal Q }</m>. But if we start by assuming that <m>n^2</m> is even,
+      that is, <m>n^2=2m</m> for some <m>m</m>, it is not clear what we should do next. It would be a lot easier
+      if we could start with a statement about <m>n</m>, not <m>n^2</m>. Since 
+      <m>\sim {\cal Q}: n \mbox{ is odd }</m>  and <m>\sim {\cal P}: n^2 \mbox{ is odd }</m>,
+      the contrapositive says that if <m>n</m> is odd, then <m>n^2</m> is also odd. So we start by assuming 
+      that <m>n</m> is odd. This means that <m>n=2m+1</m> for some integer <m>m</m>. But then 
+      <m>n^2=(2m+1)^2=4m^2+4m+1=2(2m^2+2m)+1</m> and we can re-write <m>n^2=2k+1</m> where <m>k=2m^2+2m</m> 
+      is an integer. 
+      So we see that <m>n^2</m> is also odd, and we conclude that 
+      <m>\sim {\cal Q} \Rightarrow \sim{\cal P }</m> is true, and so 
+      <m>{\cal P} \Rightarrow {\cal Q }</m> is also true and we are done.-->
+    </p>
       </example>
+    </subsection>
+
+    <subsection>
+      <title> Contradiction</title>
+      <p> Suppose we know that a statement <m>\cal Q</m> is false. If we can prove that 
+        <m>\sim {\cal P} \Rightarrow {\cal Q }</m>, then <m>\sim {\cal P}</m> cannot be true (because it leads to 
+        a false statement), and so <m>\cal P</m> must be true.  Usually we do not know what the false statement 
+        <m>\cal Q</m> is at the beginning of a proof by contradiciton. The strategy is to start from the negation 
+        of the statement we want to prove, then derive logical consequences until we reach a statement that we
+        recognize as false. We then say that we have reached a contradiction, and the original statement must be true.
+        </p>
     
-    </subsection>>
+        <example> 
+          <p>
+          We will prove that <m>\sqrt{2}</m> is not a rational number. So we want to prove the statement 
+          <m>{\cal P}: \sqrt{2}\not \in {\mathbb Q}</m>. We proceed by contradiction, and so we assume that 
+          <m>\sim {\cal P}: \sqrt{2}\in {\mathbb Q}</m> is true. This means that <m>\sqrt{2}=\frac{n}{m}</m> where
+          <m>n</m> and <m>m</m> are integers. Now let <m>d=\gcd(m,n)</m>. Then we can write 
+          <m>n=du, m=dv</m>, where <m>\gcd(u,v)=1</m>, and <m>\sqrt{2}=\frac{n}{m}=\frac{du}{dv}=\frac{u}{v}</m>,
+          and <m>\frac{u}{v}</m> is a fraction in lowest terms. Squaring the equation <m>\sqrt{2}=\frac{u}{v}</m>,
+           we find that 
+          <m>2=\frac{u^2}{v^2}</m>,
+          that is the same as <m>u^2=2v^2</m>. Since <m>v^2</m> is an integer, this is telling us that <m>u^2</m>
+           is even. By <xref ref="n2even"/>, <m>u</m> must be even. So we can write <m>u=2k</m> for some integer <m>k</m>.
+           But then we find <m> (2k)^2=2v^2</m>, or <m>4k^2=2v^2</m>, and dividing this equation by 2, we get
+           <m>2k^2=v^2</m>. But this means that <m>v</m> is also even, and we reach the conclusion that <m>u</m> and
+           <m>v</m> are both even. We know this to be false, because the fraction <m>\frac{u}{v}</m>
+            is in lowest terms. So we have reached a contradiction, and we conclude that <m>\sqrt{2}</m> is not a 
+            rational number.
+          </p>
+        
+        </example>
+    </subsection>
+    <subsection><title> Induction</title>
+      <p>A useful way to prove statements that involve positive integers is by <term>induction</term>,
+        as is discussed in the Discrete course.  We will now review the concepts involved, and
+         state our first theorem.</p>
+      <p>
+<theorem> <title>Principle of 
+  Mathematical Induction</title>      
+        <p>Suppose that for each positive integer <m>n</m>, <m>{\cal P}(n)</m> is a statement.
+        Suppose that  <m>{\cal P}(1)</m> is true <alert>and</alert> 
+        <m> {\cal P}(n)\Rightarrow {\cal P}(n+1)</m> for all <m>n\in {\mathbb N}</m>.  Then 
+        <m>{\cal P}(n)</m> is true for all <m>n\in {\mathbb N}</m>.</p>
+</theorem>
+      </p>
+      <p>
+      It's important to note that in the Principle of Mathematical Induction (that we abbreviate as PMI)
+      there are three statements involved:
+        <ol marker="a">
+          <li> <m>{\cal P}(1)</m> is true </li>
+          <li> <m> {\cal P}(n)\Rightarrow {\cal P}(n+1)</m> for all <m>n\in {\mathbb N}</m></li>
+          <li><m>{\cal P}(n)</m> is true for all <m>n\in {\mathbb N}</m>.</li>
+        </ol>
+        and the PMI says that if both a. and b. are true, then c. is true. So the PMI is the implication
+        statement:
+<dl><li> (a. and b.) <m>\Rightarrow </m> c.</li></dl> 
+The implication <m>{\cal P}(n)\Rightarrow {\cal P}(n+1)</m> is often called the <term>induction step</term>
+and it is usually here that the hard part of the proof is found. When proving the induction step, the statement
+<m>{\cal P}(n)</m> is called the <term>induction hypothesis</term>. 
+        </p>
+        <p> The PMI is a theorem because it can be proved from the Well-Ordering Principle. In fact, we could also
+          take a different point of view. We could say that the PMI is an axiom, and then the WOP
+          can be proved from it. In other words, WOP and PMI are equivalent statements. They cannot both be proved, but
+          if we assume one as an axiom, then the other follows as a theorem.  </p>
+          <p>
+            <example>
+              <p>We want to prove that <m>n\lt 2^n</m> for all positive integers <m>n</m>. So we let
+              <m>{\cal P}(n): n\lt 2^n</m>, and this is statement c. in our discussion of PMI above. Statement
+              a. is <m>{\cal P}(1):  1\lt 2^1</m>, which is surely true. So if we can prove the induction step 
+              b.,  that is:
+               <m>{\cal P}(n)\Rightarrow {\cal P}(n+1)</m>, 
+              then we are done, because PMI tells us that a. and b. imply c. </p>
+              <p> So we start by assuming the induction hypothesis, that is 
+              <m>n\lt 2^n</m>. Then we note that, for any <m>n\gt 1</m>,  <m>n+1\lt n+n=2n</m>. Since we are
+              assuming <m>n\lt2^n</m>, we find <m>n+1\lt 2n \lt 2(2^n) = 2^{n+1}</m>, 
+              so that <m>{\cal P}(n+1)</m> is true. We have now shown that <m>{\cal P}(n+1)</m> follows 
+              from <m>{\cal P}(n)</m>,
+              or <m>{\cal P}(n)\Rightarrow {\cal P}(n+1)</m>, and that is statement b., and so by the PMI we conclude
+              that c. is true.  </p>
+            </example>
+          </p>
+          <p>
+            You should take notice that the crucial step in this proof was the statement that <m>n+1\lt n+n</m>
+            for every positive integer <m>n\gt 1</m>. While this is obvious once we see it, it's not so easy to think
+            of it as a necessary step in the proof. This is a fact with a lot of mathematical proofs. The crucial 
+            idea behind a proof is often the result of some insight that can only come with a lot of 
+            practice and experience.
+          </p>
+    </subsection>
+<subsection xml:id="cases">
+  <title>Cases in proofs</title>
+  <p>
+    It often happens that a statement is most easily understood and proved if we break it down into two or more cases,
+    as the next example illustrates.
+  </p>
+<example>
+  We want to prove that for every positive integer <m>n</m>, the fraction <m>\frac{n(n+1)}{2}</m>, in spite
+  of its appearance, is actually an integer. An easy way to see this is by giving a direct proof 
+  considering two cases: <m>n</m> even, and 
+  <m>n</m> odd. If <m>n</m> is even, then <m>n=2m</m> for some integer <m>m</m>, and so 
+  <me>\frac{n(n+1)}{2}=\frac{2m(n+1)}{2}=m(n+1),</me> an integer. If <m>n</m> is odd, then <m>n=2m+1</m> for some integer
+  <m>m</m>, and then <me>\frac{n(n+1)}{2}=\frac{n(2m+1+1)}{2}=\frac{2n(m+1)}{2}=n(m+1),</me> an integer. 
+  So in both cases
+  <m>\frac{n(n+1)}{2}</m> is an integer, and we are done.
+</example>
+</subsection>
+
 </section>
 
 
