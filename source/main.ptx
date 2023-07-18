@@ -547,17 +547,21 @@ that <m>\cal Q</m> is true.
       <example>
 <p>Prove that if <m>n</m> is an even integer, then <m>3n</m> is divisible by 6. 
 </p>
+<hint>
 <p>In this problem, the given assumptions consist in the 
   statement <me>{\cal P}: n \mbox{ is an even integer}</me>
   the conclusion is the statement <me>{\cal Q}: 3n \mbox{ is divisible by 6}</me> and we want to prove 
-  <m>{\cal P}\Rightarrow {\cal Q}</m>. 
+  <m>{\cal P}\Rightarrow {\cal Q}</m>. Think about what it means for <m>n</m> to be even.
 </p>
+</hint>
+<solution component="instructor">
 <p>
-So we start deriving logical conclusions. <m>\cal P</m> is saying that <m>n</m> is even, 
+We start deriving logical conclusions. <m>\cal P</m> is saying that <m>n</m> is even, 
 so we can write <m>n=2m</m> for some integer
 <m>m</m>. Then <m>3n=3(2m)=6m</m>. But this means that <m>3n</m> is divisible by 6. So we conclude that <m>\cal Q</m>
 is true. 
 </p>
+</solution>
 </example>
 </subsection>
 
@@ -572,9 +576,14 @@ we also prove the other.
     <p>Suppose that <m>n</m> is a positive integer. Prove that if <m>n^2</m> is even, then <m>n</m> is
       even.  
     </p>
+    <hint>
     <p>We start assuming <m>n</m> is a positive integer and we let  <me>{\cal P}: n^2 \mbox{ is even },</me>
       <me>{\cal Q}: n \mbox{ is even }.</me> 
-     <!--  So we want to prove  <m>{\cal P} \Rightarrow {\cal Q }</m>. But if we start by assuming that <m>n^2</m> is even,
+      Now write the contrapositive of <m>{\cal P}\Rightarrow {\cal Q}</m> and use a direct proof.
+    </p>
+  </hint>
+      <solution component="instructor">
+        <p>We want to prove  <m>{\cal P} \Rightarrow {\cal Q }</m>. But if we start by assuming that <m>n^2</m> is even,
       that is, <m>n^2=2m</m> for some <m>m</m>, it is not clear what we should do next. It would be a lot easier
       if we could start with a statement about <m>n</m>, not <m>n^2</m>. Since 
       <m>\sim {\cal Q}: n \mbox{ is odd }</m>  and <m>\sim {\cal P}: n^2 \mbox{ is odd }</m>,
@@ -584,8 +593,9 @@ we also prove the other.
       is an integer. 
       So we see that <m>n^2</m> is also odd, and we conclude that 
       <m>\sim {\cal Q} \Rightarrow \sim{\cal P }</m> is true, and so 
-      <m>{\cal P} \Rightarrow {\cal Q }</m> is also true and we are done.-->
+      <m>{\cal P} \Rightarrow {\cal Q }</m> is also true and we are done.
     </p>
+  </solution>
       </example>
     </subsection>
 
@@ -601,8 +611,13 @@ we also prove the other.
     
         <example> 
           <p>
-          We will prove that <m>\sqrt{2}</m> is not a rational number. So we want to prove the statement 
-          <m>{\cal P}: \sqrt{2}\not \in {\mathbb Q}</m>. We proceed by contradiction, and so we assume that 
+          We want to prove that <m>\sqrt{2}</m> is not a rational number. 
+          <hint> We want to prove the statement 
+          <m>{\cal P}: \sqrt{2}\not \in {\mathbb Q}</m>. Proceed by contradiction, and write <m>\sqrt{2}</m> as
+          a fraction in lowest terms. Then multiply by the denominator, and square the equation.</hint>
+        </p>
+          <solution component="instructor">
+          <p> Assume that 
           <m>\sim {\cal P}: \sqrt{2}\in {\mathbb Q}</m> is true. This means that <m>\sqrt{2}=\frac{n}{m}</m> where
           <m>n</m> and <m>m</m> are integers. Now let <m>d=\gcd(m,n)</m>. Then we can write 
           <m>n=du, m=dv</m>, where <m>\gcd(u,v)=1</m>, and <m>\sqrt{2}=\frac{n}{m}=\frac{du}{dv}=\frac{u}{v}</m>,
@@ -617,7 +632,7 @@ we also prove the other.
             is in lowest terms. So we have reached a contradiction, and we conclude that <m>\sqrt{2}</m> is not a 
             rational number.
           </p>
-        
+        </solution>
         </example>
     </subsection>
     <subsection><title> Induction</title>
@@ -654,9 +669,15 @@ and it is usually here that the hard part of the proof is found. When proving th
           if we assume one as an axiom, then the other follows as a theorem.  </p>
           <p>
             <example>
-              <p>We want to prove that <m>n\lt 2^n</m> for all positive integers <m>n</m>. So we let
+              <p>Prove that <m>n\lt 2^n</m> for all positive integers <m>n</m>. 
+                <hint> Write down what the statement <m>{\cal P}(n)</m> is, check that <m>{\cal P}(1)</m> is
+                  true, and then prove <m>{\cal P}(n+1)</m> assuming that <m>{\cal P}(n)</m> is true.
+                </hint>
+              </p>
+                <solution component="instructor">
+                  <p>Let
               <m>{\cal P}(n): n\lt 2^n</m>, and this is statement c. in our discussion of PMI above. Statement
-              a. is <m>{\cal P}(1):  1\lt 2^1</m>, which is surely true. So if we can prove the induction step 
+              a. is <m>{\cal P}(1):  1\lt 2^1</m>, which is surely true. So if we prove the induction step 
               b.,  that is:
                <m>{\cal P}(n)\Rightarrow {\cal P}(n+1)</m>, 
               then we are done, because PMI tells us that a. and b. imply c. </p>
@@ -667,10 +688,11 @@ and it is usually here that the hard part of the proof is found. When proving th
               from <m>{\cal P}(n)</m>,
               or <m>{\cal P}(n)\Rightarrow {\cal P}(n+1)</m>, and that is statement b., and so by the PMI we conclude
               that c. is true.  </p>
+              </solution>
             </example>
           </p>
-          <p>
-            You should take notice that the crucial step in this proof was the statement that <m>n+1\lt n+n</m>
+          <p component="instructor">
+            Note that the crucial step in the solution above was the statement that <m>n+1\lt n+n</m>
             for every positive integer <m>n\gt 1</m>. While this is obvious once we see it, it's not so easy to think
             of it as a necessary step in the proof. This is a fact with a lot of mathematical proofs. The crucial 
             idea behind a proof is often the result of some insight that can only come with a lot of 
@@ -684,20 +706,172 @@ and it is usually here that the hard part of the proof is found. When proving th
     as the next example illustrates.
   </p>
 <example>
-  We want to prove that for every positive integer <m>n</m>, the fraction <m>\frac{n(n+1)}{2}</m>, in spite
-  of its appearance, is actually an integer. An easy way to see this is by giving a direct proof 
+  <p>We want to prove that for every positive integer <m>n</m>, the fraction <m>\frac{n(n+1)}{2}</m>, in spite
+  of its appearance, is actually an integer. 
+  <hint> Give a direct proof 
   considering two cases: <m>n</m> even, and 
-  <m>n</m> odd. If <m>n</m> is even, then <m>n=2m</m> for some integer <m>m</m>, and so 
+  <m>n</m> odd.</hint> </p>
+  <solution component="instructor">
+ <p> If <m>n</m> is even, then <m>n=2m</m> for some integer <m>m</m>, and so 
   <me>\frac{n(n+1)}{2}=\frac{2m(n+1)}{2}=m(n+1),</me> an integer. If <m>n</m> is odd, then <m>n=2m+1</m> for some integer
   <m>m</m>, and then <me>\frac{n(n+1)}{2}=\frac{n(2m+1+1)}{2}=\frac{2n(m+1)}{2}=n(m+1),</me> an integer. 
   So in both cases
-  <m>\frac{n(n+1)}{2}</m> is an integer, and we are done.
+  <m>\frac{n(n+1)}{2}</m> is an integer, and we are done.</p>
+  </solution>
 </example>
 </subsection>
 
 </section>
+    </chapter>
 
 
+    <chapter><title>The Real Numbers</title>
+      <section>
+      <title> Ordered Fields </title>
+      <p>
+      In the previous chapter we have discussed the rational numbers <m>{\mathbb Q}</m> and said that they 
+      form an ordered field. We now take a different, and abstract, point of view. We extract some of the  
+      properties of the rational number, and list them as axioms. We will then say that any set that satisfies
+      those properties is called an ordered field.</p>
+      
+      <p>All the other properties of the ordered field must be
+      consequences of these axioms. It is important to distinguish between axioms, and properties that derive from
+      them (that we can call theorems). So for example <m>x+0=x</m> is one of the  axioms, that cannot be proved. 
+      But instead <m>x\cdot 0 =0</m> is a theorem (of which we will soon see the proof).
+      </p>
+      <p>
+      Bear in mind that the elements of the 
+      set <m>F</m> we are about to introduce 
+      are not necessarily rational number. We think of them just as abstract elements of a set that satisfy 
+      a list of axioms. Later in the chapter we will add one more crucial axiom, and we will call
+      the resulting set satisfying all those properties the Real Numbers.
+      </p>
+      
+        <p>We start with a set <m>F</m>. A <term>binary operation</term> on a set is any function with domain
+        <m>F\times F</m> and range <m>F</m> (recall that <m>F\times F</m> is the set of all pairs <m>(x,y)</m> of
+        elements of <m>F</m>). We now assume that our set <m>F</m> has two binary operations, called addition and 
+        multiplication. Given an input <m>(x,y)</m>, the output of addition is denoted by <m>x+y</m> and the output
+        of multiplication is denoted by <m>xy</m> (or sometimes <m>x\cdot y</m>). These operations satisfy the 
+        following axioms:</p>
+<p>
+        <dl> 
+          <li><title>A1 (Commutativity) </title> <m>x+y=y+x \hspace{5ex}</m> for all <m>x,y\in F</m> 
+          </li>
+          <li><title>A2 (Associativity)</title>
+            <m>x+(y+z)=(x+y)+z \hspace{5ex}</m> for all <m>x,y,z \in F</m>
+        </li>
+        <li><title>A3 (Additive identity)</title>
+          There is a unique element <m>0\in F</m>, called the <term>additive identity</term>, such that <m>x+0=x 
+            \hspace{1ex} \mbox{ for all } x\in F
+          </m> 
+      </li>
+      <li><title>A4 (Additive inverse)</title>
+        For each <m>x\in F</m>, there is a unique element <m>-x\in F</m>, called the <term>additive inverse</term>, such that
+         <m>x+(-x)=0</m>.
+      </li>
+        </dl>
+        </p>
+<p>
+  Any set <m>F</m> with a binary operation <m>+</m> that satisfies axioms A1-A4 is called an <term>abelian group</term>. 
+  So for example the integers <m>\mathbb Z</m> with the operation of addition are an abelian group. Of course a 
+  common name for the additive identity af axiom A3 is <q>zero</q>. 
+</p>
+<p>
+  The multiplication operation satisfies the following axioms:</p>
+
+  <p>
+    <dl width="wide"> 
+      <li><title>M1 (Commutativity) </title> <m>xy=yx \hspace{1ex}</m> for all <m>x,y\in F</m> 
+      </li>
+      <li><title>M2 (Associativity)</title>
+        <m>x(yz)=(xy)z \hspace{5ex}</m> for all <m>x,y,z \in F</m>
+    </li>
+    <li><title>M3 (Multiplicative identity)</title>
+      There is a unique element <m>1\in F</m>, called the <term>multiplicative identity</term>, such that <m>1\neq 0</m>
+      and  <m>1x=x 
+        \hspace{1ex} \mbox{ for all } x\in F
+      </m> 
+  </li>
+  <li><title>M4 (Multiplicative inverse)</title>
+    For each non-zero element <m>x\in F</m>, there is a unique element <m>x^{-1}\in F</m>, 
+    called the <term>multiplicative inverse</term>, such that
+     <m>xx^{-1}=1</m>.
+  </li>
+    </dl>
+</p>
+<p>
+Note that the symmetry between the two operations is not perfect, because we require <m>x\neq 0</m> for the 
+existence of the multiplicative inverse, but there is no restriction on the existence of the additive inverse. 
+Another way to say this is that <m>-1</m> is defined, but <m>0^{-1}</m> is not. We now add one more axiom that relates 
+the two operation, and further breaks the symmetry.
+</p>
+<p>
+<dl><li><title>D (Distributive law)</title>
+  <m>x(y+z)=xy+xz \hspace{3ex} </m> for all <m>x,y,z\in F</m></li>
+</dl>
+</p>
+<p>
+Any set with two binary operations satisfying A1-A4, M1-M3, D is called a <term>commutative ring</term>.
+So the integers with the operations <m>+</m> and <m>\cdot</m> form a commutative ring. 
+If axiom M4 is also satisfied, then <m>F</m> is called a <term>field</term>. So the rational numbers
+with the operations <m>+</m> and <m>\cdot</m> are an example of a field. But there are other examples.
+An important one is the set  <m>{\mathbb Q}[i]=\{a+ib| a,b \in {\mathbb Q}, i^2=-1\}</m>.  
+</p>
+<p> We can now state our first theorem.</p>
+<theorem>
+<p>In any field <m>F</m>, <m>x\cdot 0 = 0</m> for all <m>x\in F</m>.</p>
+</theorem>
+<proof>
+  <p>
+    <hint> Use the fact that <m>0+0=0</m> and the distributive law. </hint>
+  </p>
+  <solution component="instructor">
+    <p>
+      Using A3 with <m>x=0</m>, we find <m>0=0+0</m>.
+      Then using the distributive law, we have
+      <me> x\cdot 0=x\cdot (0+0)= x\cdot 0+x\cdot 0.</me>
+      Now add <m>-(x\cdot 0)</m> to both sides to get
+      <me> x\cdot 0 +-(x\cdot 0) = (x\cdot 0+x\cdot 0)+-(x\cdot 0).</me>
+      Use the definition of additive inverse on the left and the associative law A2 on the right:
+      <me> 0=x\cdot 0+(x\cdot 0+-(x\cdot 0))</me>
+      Now use the definition of additive inverse again:
+      <me> 0=x\cdot 0+0</me>
+      and finally use A3 to find
+      <me>0=x\cdot 0.</me>
+    </p>
+  </solution>
+</proof>
+
+<p>
+We now introduce four order axioms. We assume that there is a <term>binary relation</term><fn> A binary relation 
+  on a set <m>F</m> is just any subset <m>S</m> of <m>F\times F</m>. Writing <m>x\lt y</m> is just a convenient way
+  to write that <m>(x,y)\in S</m>.
+</fn> , denoted by <m>\lt </m>,
+satisfying the axioms:
+</p>
+
+<p>
+  <dl> 
+    <li><title>O1 (Total order) </title> For all <m>x,y\in F</m>, either <m>x\lt y</m>, or <m>y\lt x</m>, or <m>x=y</m>. 
+    </li>
+    <li><title>O2 (Transitivity)</title> If 
+      <m>x\lt y</m> and <m> y\lt z</m>, then <m>x\lt z</m>.
+  </li>
+  <li><title>O3</title> If <m>x\lt y</m>, then <m>x+z\lt y+z</m> for all <m>z\in F</m>.
+</li>
+<li><title>O4 </title>If <m>x\lt y</m> and <m>0\lt z</m>, then <m>xz\lt yz</m>.
+</li>
+  </dl>
+</p>
+
+<p>
+So the rational numbers together with the usual ordering form an ordered field. But
+there is no way to define an order satisfying the four order axioms on the field <m>{\cal Q}[i]</m>.
+</p>
+
+
+
+      </section>
 
     </chapter>
 
