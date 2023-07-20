@@ -868,7 +868,10 @@ satisfying the axioms:
 So the rational numbers together with the usual ordering form an ordered field. But
 there is no way to define an order satisfying the four order axioms on the field <m>{\cal Q}[i]</m>.
 </p>
-
+<subsection xml:id="subsec-The Completeness Axiom">
+  <title>The Completeness Axiom</title>
+  
+</subsection>
 
 
       </section>
