@@ -11,8 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Unfortunately mathematics in school is often taught as a collection of rules and skills that allow students to solve problems, such as equations, graphing problems, simplification of algebraic expressions, or complex calculations. Discussions on the meaning of the concepts involved and the reason why the rules and techniques work are often neglected. This course will be based on <dfn class="terminology">definitions</dfn>, that precisely introduce and describe a new concept, <dfn class="terminology">statements</dfn> (also called theorems, or lemmas, or propositions)  based on these definitions, and <dfn class="terminology">proofs</dfn> of the statements. We will now discuss a little each of these notions.</div>
-<span class="incontext"><a href="section-3.html#p-12" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">It’s important to note that in the Principle of Mathematical Induction (that we abbreviate as PMI) there are three statements involved:</div>
+<ol class="lower-alpha">
+<li><div class="para">
+<span class="process-math">\({\cal P}(1)\)</span> is true</div></li>
+<li><div class="para">
+<span class="process-math">\({\cal P}(n)\Rightarrow {\cal P}(n+1)\)</span> for all <span class="process-math">\(n\in {\mathbb N}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\({\cal P}(n)\)</span> is true for all <span class="process-math">\(n\in {\mathbb N}\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">and the PMI says that if both a. and b. are true, then c. is true. So the PMI is the implication statement:</div>
+<dl class="description-list">
+<dt></dt>
+<dd>(a. and b.) <span class="process-math">\(\Rightarrow \)</span> c.</dd>
+</dl>
+<div class="para">The implication <span class="process-math">\({\cal P}(n)\Rightarrow {\cal P}(n+1)\)</span> is often called the <dfn class="terminology">induction step</dfn> and it is usually here that the hard part of the proof is found. When proving the induction step, the statement <span class="process-math">\({\cal P}(n)\)</span> is called the <dfn class="terminology">induction hypothesis</dfn>.</div>
+</div>
+<span class="incontext"><a href="section-1.html#p-12" class="internal">in-context</a></span>
 </body>
 </html>

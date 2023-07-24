@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Before we proceed with more definitions, we need to review some logic. If <span class="process-math">\(\cal P\)</span> is a statement, we denote by <span class="process-math">\(\sim \cal P\)</span> its negation. So <span class="process-math">\(\sim \cal P\)</span> is true when <span class="process-math">\(\cal P\)</span> is false, and <span class="process-math">\(\sim \cal P\)</span> is false when <span class="process-math">\(\cal P\)</span> is true. For example, if <span class="process-math">\({\cal P} (x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is an integer greater than 1" then <span class="process-math">\(\sim {\cal P} (x)\text{:}\)</span> "<span class="process-math">\(x\)</span> is an integer less than or equal to 1".</div>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Suppose that we work with rational numbers, so all the variables  represent rational numbers. Consider the statement “Every number has a square root.” We can write the statement in symbols as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall x)(\exists y)(y^2=x).
+\end{equation*}
+</div>
+<div class="para">According to our rule, the negation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\exists x)(\forall y)(y^2\neq x).
+\end{equation*}
+</div>
+<div class="para">In fact, the last statement says "There is some rational number <span class="process-math">\(x\)</span> with the property that whatever rational number <span class="process-math">\(y\)</span> we use, the square of <span class="process-math">\(y\)</span> will not be <span class="process-math">\(x\)</span>". This is the same thing as saying that there is some <span class="process-math">\(x\)</span> that does not have a square root.</div>
+</div>
 <span class="incontext"><a href="section-3.html#p-24" class="internal">in-context</a></span>
 </body>
 </html>
